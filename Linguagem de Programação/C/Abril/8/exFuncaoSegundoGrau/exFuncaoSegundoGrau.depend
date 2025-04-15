@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1744154925 source:c:\users\aluno\codeblocks-projects\exfuncaosegundograu\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1743550559 source:c:\users\aluno\codeblocks-projects\exdistanciapontos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

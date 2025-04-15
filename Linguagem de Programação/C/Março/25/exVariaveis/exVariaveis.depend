@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1742943096 source:c:\users\aluno\codeblocks-projects\exvariaveis\main.c
+	<stdio.h>
+	<stdlib.h>
+
