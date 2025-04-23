@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1745361578 source:c:\users\aluno\codeblocks-projects\expais\main.c
+	<stdio.h>
+	<stdlib.h>
+
