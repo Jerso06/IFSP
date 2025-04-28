@@ -7,10 +7,17 @@ programa
 		
 		escreva("Informe um valor: ")
 		leia(valor)
-		para(inteiro i=1;i<=valor;i++){
-			multiplicador = multiplicador*i
+		escreva(valor, "! = ")
+		para(inteiro i=valor;i>=1;i--){
+			multiplicador = multiplicador*i
+			se(i!=1){
+				escreva(i,"x")	
+			}senao{
+				escreva(i)
+			}
+			
 		}
-		escreva("Fatorial do valor ", valor, " é: ", multiplicador)
+		escreva(" = ",multiplicador)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -18,7 +25,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 255; 
+ * @POSICAO-CURSOR = 238; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
