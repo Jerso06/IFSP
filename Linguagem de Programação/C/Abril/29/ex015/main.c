@@ -9,7 +9,7 @@ int main()
     scanf("%d", &valor);
     printf("Numero | Fator Primo");
     while(valor!=1){
-        for(int i=0;i<valor;i++){
+        for(int i=0;i<=valor;i++){
             cont=0;
             for(int j=1;j<=i;j++){
                 if(i%j==0){
@@ -24,6 +24,9 @@ int main()
                 }
             }
         }
+    }
+    if(valor==1){
+        printf("\n1");
     }
     return 0;
 }

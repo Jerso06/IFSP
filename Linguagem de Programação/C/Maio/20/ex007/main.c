@@ -3,18 +3,21 @@
 #include <string.h>
 int main()
 {
-    char texto[50], texto2[50], caracter;
+    char str1[50], caracter, str2[50];
+    int cont=0;
 
     printf("Informe um texto: ");
-    gets(texto);
+    gets(str1);
     printf("Informe um caracter: ");
-    scanf(" %c", &caracter);
+    scanf(" %c",&caracter);
 
-    for(int i=0; i<strlen(texto); i++){
-        if(strcmp(texto[i], caracter) != 0){
-            texto2[i]=texto[i];
+    for(int i=0;i<strlen(str1);i++){
+        if(str1[i] != caracter){
+            str2[cont]=str1[i];
+            cont++;
         }
     }
-    printf("%s",texto);
+
+    puts(str2);
     return 0;
 }
