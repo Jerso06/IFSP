@@ -12,7 +12,6 @@ int main()
             texto[i]-=32;
         }
     }
-
     puts(texto);
     return 0;
 }
