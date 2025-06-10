@@ -16,19 +16,22 @@ programa
 	}
 
 	funcao calculadora(real n1, real n2, caracter calculo){
+		escreva("\n")
 		escolha(calculo){
 			caso '+':
-				escreva(n1,"+",n2,"=",n1+n2)
+				escreva(n1," + ",n2," = ",n1+n2)
 				pare
 			caso '-':
-				escreva(n1,"-",n2,"=",n1-n2)
+				escreva(n1," - ",n2," = ",n1-n2)
 				pare
 			caso '*':
-				escreva(n1,"*",n2,"=",n1*n2)
+				escreva(n1," * ",n2," = ",n1*n2)
 				pare
 			caso '/':
-				escreva(n1,"/",n2,"=",n1/n2)
+				escreva(n1," / ",n2," = ",n1/n2)
 				pare
+			caso contrario:
+				escreva("Sinal inválido.")
 		}
 	}
 }
@@ -37,7 +40,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 338; 
+ * @POSICAO-CURSOR = 609; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
