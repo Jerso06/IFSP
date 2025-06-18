@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1750261163 source:c:\users\jedso\onedrive\Área de trabalho\ifsp\linguagem de programação\c\junho\18\ex005\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
