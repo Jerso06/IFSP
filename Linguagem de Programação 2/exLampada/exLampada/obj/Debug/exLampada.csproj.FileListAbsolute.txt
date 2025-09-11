@@ -1,0 +1,8 @@
+C:\Users\Aluno\source\repos\exLampada\exLampada\bin\Debug\exLampada.exe.config
+C:\Users\Aluno\source\repos\exLampada\exLampada\bin\Debug\exLampada.exe
+C:\Users\Aluno\source\repos\exLampada\exLampada\bin\Debug\exLampada.pdb
+C:\Users\Aluno\source\repos\exLampada\exLampada\obj\Debug\exLampada.csproj.AssemblyReference.cache
+C:\Users\Aluno\source\repos\exLampada\exLampada\obj\Debug\exLampada.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\source\repos\exLampada\exLampada\obj\Debug\exLampada.exe
+C:\Users\Aluno\source\repos\exLampada\exLampada\obj\Debug\exLampada.pdb
+C:\Users\Aluno\source\repos\exLampada\exLampada\obj\Debug\exLampada.exe.config
