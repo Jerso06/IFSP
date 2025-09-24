@@ -112,6 +112,7 @@
             this.btn1.TabIndex = 1;
             this.btn1.Text = "Executar";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // txtBox1
             // 

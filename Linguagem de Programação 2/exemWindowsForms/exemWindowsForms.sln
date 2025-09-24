@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exemWindowsForms", "exemWindowsForms\exemWindowsForms.csproj", "{2901B558-5EA9-4165-82F8-5198826C65D0}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exemWindowsForms3", "exemWindowsForms3\exemWindowsForms3.csproj", "{A2302B1D-E3EC-488E-8344-AC343DF11D2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exemWindowsForms4", "exemWindowsForms4\exemWindowsForms4.csproj", "{23D93C61-D8A6-4EEF-B1BB-F638EEDAACB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exemWindowsForms5", "exemWindowsForms5\exemWindowsForms5.csproj", "{D96FC185-F45A-4195-87F8-8FE7B2CEC113}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{23D93C61-D8A6-4EEF-B1BB-F638EEDAACB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23D93C61-D8A6-4EEF-B1BB-F638EEDAACB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23D93C61-D8A6-4EEF-B1BB-F638EEDAACB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D96FC185-F45A-4195-87F8-8FE7B2CEC113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D96FC185-F45A-4195-87F8-8FE7B2CEC113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D96FC185-F45A-4195-87F8-8FE7B2CEC113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D96FC185-F45A-4195-87F8-8FE7B2CEC113}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

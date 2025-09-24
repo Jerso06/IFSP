@@ -8,3 +8,4 @@ C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\exemWindowsForms\exemWi
 C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\exemWindowsForms\exemWindowsForms4\obj\Debug\exemWindowsForms4.csproj.CoreCompileInputs.cache
 C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\exemWindowsForms\exemWindowsForms4\obj\Debug\exemWindowsForms4.exe
 C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\exemWindowsForms\exemWindowsForms4\obj\Debug\exemWindowsForms4.pdb
+C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\exemWindowsForms\exemWindowsForms4\obj\Debug\exemWindowsForms4.exe.config
