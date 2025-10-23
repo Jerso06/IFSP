@@ -1,0 +1,7 @@
+C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\ExemploLista\ExemploLista2\bin\Debug\ExemploLista2.exe.config
+C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\ExemploLista\ExemploLista2\bin\Debug\ExemploLista2.exe
+C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\ExemploLista\ExemploLista2\bin\Debug\ExemploLista2.pdb
+C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\ExemploLista\ExemploLista2\obj\Debug\ExemploLista2.csproj.AssemblyReference.cache
+C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\ExemploLista\ExemploLista2\obj\Debug\ExemploLista2.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\ExemploLista\ExemploLista2\obj\Debug\ExemploLista2.exe
+C:\Users\Aluno\Desktop\IFSP\Linguagem de Programação 2\ExemploLista\ExemploLista2\obj\Debug\ExemploLista2.pdb
