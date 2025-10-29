@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Aluno\\Desktop\\IFSP\\Linguagem de Programa\u00E7\u00E3o 2\\ExemploExcecao1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA9163B7-B9CE-430A-AD05-198922C57EFD}|ExemploExcecao1\\ExemploExcecao1.csproj|c:\\users\\aluno\\desktop\\ifsp\\linguagem de programa\u00E7\u00E3o 2\\exemploexcecao1\\exemploexcecao1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA9163B7-B9CE-430A-AD05-198922C57EFD}|ExemploExcecao1\\ExemploExcecao1.csproj|solutionrelative:exemploexcecao1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA9163B7-B9CE-430A-AD05-198922C57EFD}|ExemploExcecao1\\ExemploExcecao1.csproj|c:\\users\\aluno\\desktop\\ifsp\\linguagem de programa\u00E7\u00E3o 2\\exemploexcecao1\\exemploexcecao1\\errocriticoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA9163B7-B9CE-430A-AD05-198922C57EFD}|ExemploExcecao1\\ExemploExcecao1.csproj|solutionrelative:exemploexcecao1\\errocriticoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ErroCriticoException.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Desktop\\IFSP\\Linguagem de Programa\u00E7\u00E3o 2\\ExemploExcecao1\\ExemploExcecao1\\ErroCriticoException.cs",
+              "RelativeDocumentMoniker": "ExemploExcecao1\\ErroCriticoException.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Desktop\\IFSP\\Linguagem de Programa\u00E7\u00E3o 2\\ExemploExcecao1\\ExemploExcecao1\\ErroCriticoException.cs",
+              "RelativeToolTip": "ExemploExcecao1\\ErroCriticoException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T23:21:07.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Desktop\\IFSP\\Linguagem de Programa\u00E7\u00E3o 2\\ExemploExcecao1\\ExemploExcecao1\\Program.cs",
+              "RelativeDocumentMoniker": "ExemploExcecao1\\Program.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Desktop\\IFSP\\Linguagem de Programa\u00E7\u00E3o 2\\ExemploExcecao1\\ExemploExcecao1\\Program.cs",
+              "RelativeToolTip": "ExemploExcecao1\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwB8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T22:31:22.31Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
