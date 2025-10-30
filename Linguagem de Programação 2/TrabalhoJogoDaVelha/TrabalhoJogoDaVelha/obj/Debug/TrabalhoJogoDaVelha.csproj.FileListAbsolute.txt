@@ -1,0 +1,11 @@
+C:\Users\jedso\source\repos\TrabalhoJogoDaVelha\TrabalhoJogoDaVelha\bin\Debug\TrabalhoJogoDaVelha.exe.config
+C:\Users\jedso\source\repos\TrabalhoJogoDaVelha\TrabalhoJogoDaVelha\bin\Debug\TrabalhoJogoDaVelha.exe
+C:\Users\jedso\source\repos\TrabalhoJogoDaVelha\TrabalhoJogoDaVelha\bin\Debug\TrabalhoJogoDaVelha.pdb
+C:\Users\jedso\source\repos\TrabalhoJogoDaVelha\TrabalhoJogoDaVelha\obj\Debug\TrabalhoJogoDaVelha.csproj.AssemblyReference.cache
+C:\Users\jedso\source\repos\TrabalhoJogoDaVelha\TrabalhoJogoDaVelha\obj\Debug\TrabalhoJogoDaVelha.Form1.resources
+C:\Users\jedso\source\repos\TrabalhoJogoDaVelha\TrabalhoJogoDaVelha\obj\Debug\TrabalhoJogoDaVelha.Properties.Resources.resources
+C:\Users\jedso\source\repos\TrabalhoJogoDaVelha\TrabalhoJogoDaVelha\obj\Debug\TrabalhoJogoDaVelha.csproj.GenerateResource.cache
+C:\Users\jedso\source\repos\TrabalhoJogoDaVelha\TrabalhoJogoDaVelha\obj\Debug\TrabalhoJogoDaVelha.csproj.CoreCompileInputs.cache
+C:\Users\jedso\source\repos\TrabalhoJogoDaVelha\TrabalhoJogoDaVelha\obj\Debug\TrabalhoJogoDaVelha.exe
+C:\Users\jedso\source\repos\TrabalhoJogoDaVelha\TrabalhoJogoDaVelha\obj\Debug\TrabalhoJogoDaVelha.pdb
+C:\Users\jedso\source\repos\TrabalhoJogoDaVelha\TrabalhoJogoDaVelha\obj\Debug\TrabalhoJogoDaVelha.exe.config
