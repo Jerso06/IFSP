@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Aluno\\Desktop\\IFSP\\Linguagem de Programa\u00E7\u00E3o 2\\ExemploAulaBanco\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4B3CCC98-D9F8-4B37-B62E-8729CC28E8F6}|exemploBancoConsole5\\exemploBancoConsole5.csproj|c:\\users\\aluno\\desktop\\ifsp\\linguagem de programa\u00E7\u00E3o 2\\exemploaulabanco\\exemplobancoconsole5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B3CCC98-D9F8-4B37-B62E-8729CC28E8F6}|exemploBancoConsole5\\exemploBancoConsole5.csproj|solutionrelative:exemplobancoconsole5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno\\Desktop\\IFSP\\Linguagem de Programa\u00E7\u00E3o 2\\ExemploAulaBanco\\exemploBancoConsole5\\Program.cs",
+              "RelativeDocumentMoniker": "exemploBancoConsole5\\Program.cs",
+              "ToolTip": "C:\\Users\\Aluno\\Desktop\\IFSP\\Linguagem de Programa\u00E7\u00E3o 2\\ExemploAulaBanco\\exemploBancoConsole5\\Program.cs",
+              "RelativeToolTip": "exemploBancoConsole5\\Program.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwBAAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T23:45:34.2Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
