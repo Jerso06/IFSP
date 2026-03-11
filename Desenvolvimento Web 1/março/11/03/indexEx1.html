@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    
+    <form>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome">
+        
+        <br>
+
+        <label for="sex">Sexo: </label>
+        <input type="radio" name="sex" value="masculino">Masculino <br>
+        <input type="radio" name="sex" value="feminino">Feminino
+
+        <br>
+
+        <label for="profissao">Profissão: </label>
+        <select name="profissao">
+            <option value="estudante">Estudante</option>
+            <option value="engenheiro">Engenheiro</option>
+            <option value="desempregado">Desempregado</option>
+        </select>
+
+        <br>
+
+        <label for="comentario">Comentários: </label>
+        <textarea name="comentario" rows="5" cols="50" placeholder="Digite aqui seus comentários"></textarea>
+
+        <br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>

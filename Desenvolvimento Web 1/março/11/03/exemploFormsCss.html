@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms CSS</title>
+
+    <style>
+        #principal {
+            margin-left: 2%;
+        }
+
+        .grupo {
+            display: flex;
+
+        }
+
+        .divInput {
+            margin: 0 15px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="principal">
+        <h1>Fale Conosco</h1>
+
+        <form action="">
+            <section class="grupo">
+                <article class="divInput">
+                    <label for="">Nome</label> <br>
+                    <input type="text" name="nome">
+                </article>
+                <article class="divInput">
+                    <label for="">Sobrenome</label> <br>
+                    <input type="text" name="sobrenome">
+                </article>
+            </section>
+
+            <br>
+
+            <section>
+                <label>Sexo</label> <br>
+                <input type="radio" name="sex" value="masculino">Masculino
+                <input type="radio" name="sex" value="feminino">Feminino
+            </section>
+
+            <br>
+
+            <section>
+                <label>Email</label> <br>
+                <input type="email" name="email" id="">
+            </section>
+
+            <br>
+
+            <section>
+                <label>Telefone</label> <br>
+                <input type="email" name="email" id="">
+            </section>
+
+            <br>
+
+            <section class="grupo">
+                <article class="divInput">
+                    <label for="">Cidade</label> <br>
+                    <select name="cidade" id="cidades">
+                        <option value="artur">Artur Nogueira</option>
+                        <option value="campinas">Campinas</option>
+                        <option value="jundiai">Jundiai</option>
+                        <option value="limeira">Limeira</option>
+                        <option value="santos">Santos</option>
+                    </select>
+                </article>
+                <article class="divInput">
+                    <label for="">Estado</label> <br>
+                    <select name="estados" id="estados">
+                        <option value="sp">SP</option>
+                        <option value="mg">MG</option>
+                        <option value="es">ES</option>
+                        <option value="rj">RJ</option>
+                    </select>
+                </article>
+            </section>
+        </form>
+    </div>
+
+</body>
+
+</html>
