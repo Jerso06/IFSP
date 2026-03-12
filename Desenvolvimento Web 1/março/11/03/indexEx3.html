@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 3</title>
+
+    <style>
+        .centralizaDados {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .centralizaItens {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        #buttons {
+            display: flex;
+            gap: 1%;
+        }
+
+        #conteudo {
+            margin-left: 0.5%;
+            padding: 0 0 1% 1%;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+        }
+
+        #forms {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        fieldset {
+            width: 24%;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="conteudo">
+        <h1>Formulário</h1>
+        <form id="forms">
+            <fieldset class="centralizaItens">
+                <legend>Dados Pessoais</legend>
+                <div>
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome">
+
+                    <br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+
+                    <br><br>
+
+                    <label for="idade">Idade:</label>
+                    <input type="number" name="idade" id="idade">
+
+                </div>
+
+                <div>
+                    <div class="centralizaDados">
+                        <div>
+                            <label for="sex">Sexo: </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="sex" value="masculino">Masculino <br>
+                            <input type="radio" name="sex" value="feminino">Feminino
+                        </div>
+                    </div>
+                </div>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Experiência Profissional</legend>
+                <label for="profissao">Profissão: </label>
+                <select name="profissao">
+                    <option value="estudante">Estudante</option>
+                    <option value="engenheiro">Engenheiro</option>
+                    <option value="desempregado">Desempregado</option>
+                </select>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações extras</legend>
+
+                <label for="cor">Cor Favorita:</label>
+                <input type="color" name="cor" id="cor">
+
+                <br><br>
+                <div class="centralizaDados">
+                    <label for="comentario">Comentários: </label>
+                    <div>
+                        <textarea name="comentario" rows="5" cols="50"
+                            placeholder="Digite aqui seus comentários" ></textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div id="buttons">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

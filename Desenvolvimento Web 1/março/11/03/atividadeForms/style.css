@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    background-color: #f0f0f0;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+#container{
+    width: 30%;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 0 1% 1% 1%;
+    background-color: white;
+}
+
+.item{
+    font-size: 20px;
+}
+
+input[type='text'],input[type='email'], select, textarea{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+input[type='text'],input[type='email'], select{
+    height: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+textarea{
+    height: 80px;
+}
+
+input[type='submit']{
+    background-color: rgb(71, 149, 252);
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid blue;
+}
+
+input[type='text']:focus,input[type='email']:focus, select:focus, textarea:focus{
+    border-color: rgb(40, 112, 245);
+    background-color: blanchedalmond;
+}
