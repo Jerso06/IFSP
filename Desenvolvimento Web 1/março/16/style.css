@@ -1,0 +1,287 @@
+@media (min-width: 1025px) {
+    #forma {
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        width: 70%;
+        padding: 1%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    #botao {
+        width: 97.5%;
+    }
+
+    body {
+        background-color: rgb(233, 233, 233);
+    }
+
+    fieldset {
+        width: 95%;
+        padding: 1%;
+        margin: 1%;
+
+        display: flex;
+    }
+
+    /* sobrescreve só o entrega */
+    #entrega {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+    }
+
+    h1 {
+        font: normal bold 2.2rem Arial;
+    }
+
+    fieldset>div {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    legend {
+        color: rgb(216, 27, 200);
+        font: normal bold 1.3rem Arial;
+    }
+
+    label {
+        font: normal bold 1rem Arial;
+    }
+
+    input {
+        height: 3vh;
+    }
+
+    input[type='radio'] {
+        width: 20px;
+        height: 2vh;
+    }
+
+    input[type='submit'] {
+        width: 100%;
+        height: 4vh;
+
+        font: normal bold 1.2rem Arial;
+        color: white;
+        background-color: rgb(83, 143, 255);
+    }
+
+    select {
+        height: 3.5vh;
+    }
+
+    .divisor {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1% 0 1%;
+    }
+
+    #entrega {
+        display: grid;
+        gap: 15px;
+    }
+
+    #entrega {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 599px) {
+    #forma {
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        width: 70%;
+        padding: 1%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    #botao {
+        width: 97.5%;
+    }
+
+    body {
+        background-color: rgb(233, 233, 233);
+    }
+
+    fieldset {
+        width: 90%;
+        padding: 1%;
+        margin: 1%;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        font: normal bold 2rem Arial;
+    }
+
+    fieldset>div {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    legend {
+        color: rgb(216, 27, 200);
+        font: normal bold 1.2rem Arial;
+    }
+
+    label {
+        font: normal bold 1rem Arial;
+    }
+
+    input {
+        height: 3vh;
+        width: 95%;
+    }
+
+    input[type='radio'] {
+        width: 20px;
+        height: 2vh;
+    }
+
+    input[type='submit'] {
+        width: 99%;
+        height: 4vh;
+
+        font: normal bold 1.2rem Arial;
+        color: white;
+        background-color: rgb(83, 143, 255);
+    }
+
+    select {
+        height: 3.5vh;
+    }
+
+    .divisor {
+        display: flex;
+        flex-direction: column;
+        margin: 1% 1% 1% 1%;
+    }
+
+    #cvvDiv {
+        margin-top: 4%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    #forma {
+        max-width: 1024px;
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        width: 70%;
+        padding: 1%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    #botao {
+        width: 97.2%;
+    }
+
+    body {
+        background-color: rgb(233, 233, 233);
+    }
+
+    fieldset {
+        width: 93%;
+        padding: 1%;
+        margin: 1%;
+
+        display: flex;
+    }
+
+    h1 {
+        font: normal bold 2.2rem Arial;
+    }
+
+    fieldset>div {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    legend {
+        color: rgb(216, 27, 200);
+        font: normal bold 1.4rem Arial;
+    }
+
+    label {
+        font: normal bold 1.1rem Arial;
+    }
+
+    input {
+        height: 3vh;
+        width: 95%;
+    }
+
+    input[type='radio'] {
+        width: 20px;
+        height: 2vh;
+    }
+
+    input[type='submit'] {
+        width: 99%;
+        height: 4vh;
+
+        font: normal bold 1.2rem Arial;
+        color: white;
+        background-color: rgb(83, 143, 255);
+    }
+
+    select {
+        height: 3.5vh;
+    }
+
+    .divisor {
+        display: flex;
+        flex-direction: column;
+        margin: 1% 1% 1% 1%;
+    }
+
+    #cvvDiv {
+        margin-top: 4%;
+    }
+
+    #entrega {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
