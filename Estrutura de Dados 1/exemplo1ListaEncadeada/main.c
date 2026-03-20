@@ -52,6 +52,24 @@ void LinkedList_add_first(LinkedList *L, int val) {
 
 }
 
+void LinkedList_add_last(LinkedList *L, int val){
+    Node *p = Node_create(val);
+    Node *aux = L->begin;
+
+    if(L->begin == NULL){
+        p->next = NULL;
+        L->begin = p;
+        L->end = p;
+    }else{
+        while(aux->next != NULL){
+            aux = aux->next;
+        }
+        aux->next = p;
+        p->next = NULL;
+        L->end = p;
+    }
+}
+
 void LinkedList_remove(LinkedList *L, int valor){
 
     Node *prev = NULL;
@@ -84,7 +102,6 @@ void LinkedList_remove(LinkedList *L, int valor){
                 free(pos);
                 L->end = prev;
             }
-
         }
     }
 }
@@ -94,8 +111,8 @@ void LinkedList_remove(LinkedList *L, int valor){
 void LinkedList_print(LinkedList *L) {
     Node *p = L->begin;
     printf("L -> ");
-    // enquanto p n�o chegou ao fim da lista, isto �,
-    // enquanto p estiver apontando para um n� da lista
+    // enquanto p n o chegou ao fim da lista, isto  ,
+    // enquanto p estiver apontando para um n  da lista
 
     while (p != NULL) {
         printf("%d ->", p->val);
@@ -111,12 +128,12 @@ int main (){
 LinkedList *La = LinkedList_create();
 
 LinkedList_add_first(La,5);
-LinkedList_add_first(La,4);
-LinkedList_add_first(La,2);
+LinkedList_add_last(La,4);
+LinkedList_add_last(La,2);
 LinkedList_add_first(La,10);
 LinkedList_add_first(La,20);
-LinkedList_add_first(La,8);
-LinkedList_add_first(La,12);
+LinkedList_add_last(La,8);
+LinkedList_add_last(La,12);
 LinkedList_add_first(La,1);
 LinkedList_print(La);
 LinkedList_remove(La, 20);
