@@ -14,6 +14,7 @@ typedef struct _linked_list {
 
     Node *begin;
     Node *end;
+    int cont;
 
 } LinkedList;
 
@@ -32,6 +33,8 @@ LinkedList *LinkedList_create() {
 
     LinkedList *L = (LinkedList *) calloc(1, sizeof(LinkedList));
     L->begin = NULL;
+    L->end = NULL;
+    L->cont = 0;
     return L;
 }
 
@@ -50,24 +53,21 @@ void LinkedList_add_first(LinkedList *L, int val) {
         L->begin = p;
     }
 
+    L->cont++;
 }
 
 void LinkedList_add_last(LinkedList *L, int val){
     Node *p = Node_create(val);
-    Node *aux = L->begin;
 
-    if(L->begin == NULL){
-        p->next = NULL;
-        L->begin = p;
+    if(L->begin != NULL){ // lista não vazia
+        L->end->next = p;
         L->end = p;
     }else{
-        while(aux->next != NULL){
-            aux = aux->next;
-        }
-        aux->next = p;
-        p->next = NULL;
+        L->begin = p;
         L->end = p;
     }
+
+    L->cont++;
 }
 
 void LinkedList_remove(LinkedList *L, int valor){
@@ -87,6 +87,7 @@ void LinkedList_remove(LinkedList *L, int valor){
                 L->begin = pos->next;
                 free(pos);
             }
+            L->cont--;
         }else{ //remover elemento no meio/final
             pos = L->begin->next;
             prev = L->begin;
@@ -94,19 +95,21 @@ void LinkedList_remove(LinkedList *L, int valor){
                 prev = pos;
                 pos = pos->next;
             }
-            if(pos->next != NULL){ // não é o último elemento
-                prev->next = pos->next;
-                free(pos);
-            }else{ // é o último
-                prev->next = NULL;
-                free(pos);
-                L->end = prev;
+            if(pos != NULL){
+                if(pos->next != NULL){ // não é o último elemento
+                    prev->next = pos->next;
+                    free(pos);
+                    L->cont--;
+                }else{ // é o último
+                    prev->next = NULL;
+                    free(pos);
+                    L->end = prev;
+                    L->cont--;
+                }
             }
         }
     }
 }
-
-
 
 void LinkedList_print(LinkedList *L) {
     Node *p = L->begin;
@@ -119,8 +122,28 @@ void LinkedList_print(LinkedList *L) {
         p = p->next;
     }
     printf(" NULL  \n");
+    printf("Quantidade de nos na lista: %d\n", LinkedList_cont(L));
 }
 
+int LinkedList_cont(LinkedList *L){
+    return (L->cont);
+}
+
+int LinkedList_return_first(LinkedList *L){
+    if(L->begin == NULL){
+        return -1;
+    }
+
+    return L->begin->val;
+}
+
+int LinkedList_return_last(LinkedList *L){
+    if(L->end == NULL){
+        return -1;
+    }
+
+    return L->end->val;
+}
 
 
 int main (){
@@ -140,6 +163,13 @@ LinkedList_remove(La, 20);
 LinkedList_remove(La, 2);
 LinkedList_remove(La, 12);
 LinkedList_print(La);
+LinkedList_add_first(La,300);
+LinkedList_add_first(La,25);
+LinkedList_remove(La, 34);
+LinkedList_print(La);
+
+printf("\nPrimeiro valor: %d\n", LinkedList_return_first(La));
+printf("Ultimo valor: %d\n", LinkedList_return_last(La));
 
 return (0);
 }
