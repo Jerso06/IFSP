@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema Gorjeta</title>
+</head>
+
+<body>
+    <div id="formato">
+        <h1>Calculadora de Gorjeta</h1>
+
+        <form>
+            <div class="divisor">
+                <label for="valor">Valor da Conta (R$):</label>
+                <input type="number" name="valor" id="valor">
+
+            </div>
+
+            <div class="divisor">
+                <label for="porcentagem">Porcentagem (%):</label>
+                <input type="number" name="porcentagem" id="porcentagem">
+
+            </div>
+
+            <input type="button" value="Calcular" onclick="calcGorjeta()">
+        </form>
+
+        <div id="resultado">
+            <p>Total da Conta (R$): </p>
+            <input type="text" id="valorResultado">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

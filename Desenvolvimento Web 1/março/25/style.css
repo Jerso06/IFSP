@@ -1,0 +1,80 @@
+body {
+    background-color: antiquewhite;
+    padding-top: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 80%;
+    height: 40%;
+}
+
+input[type='button'] {
+    width: 34%;
+    height: 30%;
+
+    display: flex;
+    align-self: center;
+
+    font: normal bold 14px Arial, Helvetica, sans-serif;
+
+    background-color: rgb(76, 76, 252);
+    color: white;
+    border-color: rgb(73, 73, 242);
+    border-radius: 3px;
+}
+
+input[type='button']:hover{
+    border-color: black;
+    box-shadow: none;
+}
+
+input[type='text']{
+    height: 32%;
+
+    display: flex;
+    align-self: center;
+}
+
+#formato {
+    background-color: white;
+    width: 30%;
+    height: 40vh;
+    padding: 1%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: solid 1px;
+    border-radius: 25px;
+    
+    box-shadow: -1px 1px 1px 1px;
+}
+
+#resultado {
+    width: 80%;
+    margin-top: 3%;
+    font: normal bold 18px Arial, Helvetica, sans-serif;
+
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-around;
+    padding-right: 5%;
+}
+
+.divisor {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    font-size: 17px;
+}
