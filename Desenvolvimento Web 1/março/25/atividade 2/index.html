@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema Festa</title>
+</head>
+
+<body>
+    <div id="formato">
+        <h1>Calculadora de Orçamento de Festa</h1>
+
+        <form>
+            <div class="divisor">
+                <label for="quantidade">Quantidade de Convidados: </label>
+                <input type="number" name="quantidade" id="quantidade">
+            </div>
+
+            <div class="divisor">
+                <label for="buffet">Tipo Buffet:</label>
+                <input type="radio" name="buffet" value="basico" checked><span>Básico (R$50/pessoa)</span>
+                <input type="radio" name="buffet" value="premium"><span>Premium (R$ 80/pessoa)</span>
+            </div>
+
+            <div class="divisor">
+                <label for="adicionais">Adicionais:</label>
+                <input type="checkbox" name="adicionais" id="decoracao"><span>Decoração (R$ 200)</span>
+                <input type="checkbox" name="adicionais" id="dj"><span>DJ (R$ 350)</span>
+                <input type="checkbox" name="adicionais" id="fotografo"><span>Fotógrafo (R$ 450)</span>
+            </div>
+
+            <input type="button" value="Calcular Orçamento" onclick="calcOrcamento()">
+        </form>
+
+        <div id="resultado">
+            <p>Orçamento Total: R$</p>
+            <input type="text" id="valorResultado">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

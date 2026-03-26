@@ -14,7 +14,7 @@ form {
     flex-direction: column;
     align-self: flex-start;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     height: 40%;
 }
 
@@ -35,7 +35,6 @@ input[type='button'] {
 
 input[type='button']:hover{
     border-color: black;
-    box-shadow: none;
 }
 
 input[type='text']{
@@ -43,17 +42,19 @@ input[type='text']{
 
     display: flex;
     align-self: center;
+    margin-left: 1%;
 }
 
 #formato {
     background-color: white;
-    width: 30%;
-    height: 40vh;
+    width: 20%;
+    height: 35vh;
     padding: 1%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
     border: solid 1px;
     border-radius: 25px;
@@ -62,19 +63,17 @@ input[type='text']{
 }
 
 #resultado {
-    width: 80%;
+    width: 100%;
     margin-top: 3%;
     font: normal bold 18px Arial, Helvetica, sans-serif;
 
     display: flex;
     align-self: flex-start;
-    justify-content: space-around;
     padding-right: 5%;
 }
 
 .divisor {
     display: flex;
     justify-content: space-between;
-    padding-right: 10%;
     font-size: 17px;
 }
