@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino Navbar</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+
+        header {
+            background-color: rgb(0, 12, 150);
+            width: 100%;
+            height: 9vh;
+        }
+
+        div {
+            height: 93%;
+            width: 100%;
+            border-bottom: 2px solid #ffffff;
+            background-color: #5E1284;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            font: normal small-caps bold 1rem Arial, sans-serif;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+
+            text-shadow: 2px 2px 1px #000000;
+        }
+
+        img {
+            height: 100%;
+        }
+
+        .texto:hover {
+            color: rgb(64, 79, 253);
+            transform: translate(-1px, -0.5px);
+            /*transform: scale(1.5 = 150% na horizontal, 0.8 = 80% na vertical);
+            transform: rotate(45deg);
+            transform: skew(horizontal, vertical) inclinação*/
+        }
+
+        #navbar {
+            width: 25%;
+            border: none;
+
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #navbarFinal {
+            border: none;
+            width: 14%;
+
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #btnCad {
+            border: 2px solid #ccc;
+            padding: 4%;
+            border-radius: 8px;
+        }
+
+        #btnCad:hover {
+            border-color: rgb(64, 79, 253);
+        }
+
+        #logo {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <div id="navbar">
+                <a href="https://nubank.com.br/" id="logo">
+                    <img src="nubankIcon.png" alt="Nubank">
+                </a>
+                <a href="#" class="texto">Home</a>
+                <a href="#" class="texto">Catálogo</a>
+                <a href="#" class="texto">Contato</a>
+            </div>
+
+            <div id="navbarFinal">
+                <a href="#" class="texto">Entrar</a>
+                <a href="#" id="btnCad" class="texto">Cadastre-se</a>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
