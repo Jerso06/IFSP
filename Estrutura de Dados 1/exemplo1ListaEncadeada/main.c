@@ -21,7 +21,7 @@ typedef struct _linked_list {
 
 
 Node *Node_create(int val) {
-    Node *node = (Node*) calloc(5, sizeof(Node));
+    Node *node = (Node*) calloc(1, sizeof(Node));
     node->val = val;
     node->next = NULL;
     return node;
@@ -113,25 +113,11 @@ void LinkedList_remove(LinkedList *L, int valor){
 
 //funções úteis
 
-void LinkedList_print(LinkedList *L) {
-    Node *p = L->begin;
-    printf("L -> ");
-    // enquanto p n o chegou ao fim da lista, isto  ,
-    // enquanto p estiver apontando para um n  da lista
-
-    while (p != NULL) {
-        printf("%d ->", p->val);
-        p = p->next;
-    }
-    printf(" NULL  \n");
-    printf("Quantidade de nos na lista: %d\n", LinkedList_contagem(L));
-}
-
-int LinkedList_contagem(LinkedList *L){
+int LinkedList_numero_elem(LinkedList *L){
     return (L->cont);
 }
 
-int LinkedList_return_first(LinkedList *L){
+int LinkedList_prim(LinkedList *L){
     if(L->begin == NULL){
         return -1;
     }
@@ -139,7 +125,7 @@ int LinkedList_return_first(LinkedList *L){
     return L->begin->val;
 }
 
-int LinkedList_return_last(LinkedList *L){
+int LinkedList_ult(LinkedList *L){
     if(L->end == NULL){
         return -1;
     }
@@ -156,6 +142,20 @@ void LinkedList_copia(LinkedList *L, LinkedList *M){
     }
 }
 
+void LinkedList_print(LinkedList *L) {
+    Node *p = L->begin;
+    printf("L -> ");
+    // enquanto p n o chegou ao fim da lista, isto  ,
+    // enquanto p estiver apontando para um n  da lista
+
+    while (p != NULL) {
+        printf("%d ->", p->val);
+        p = p->next;
+    }
+    printf(" NULL  \n");
+    printf("Quantidade de nos na lista: %d\n", LinkedList_numero_elem(L));
+}
+
 int main (){
 
 LinkedList *La = LinkedList_create();
@@ -170,9 +170,9 @@ LinkedList_remove(La, 20);
 LinkedList_remove(La, 2);
 LinkedList_print(La);
 
-if(LinkedList_contagem(La) != 0){
-    printf("\nPrimeiro valor: %d\n", LinkedList_return_first(La));
-    printf("Ultimo valor: %d\n\n", LinkedList_return_last(La));
+if(LinkedList_numero_elem(La) != 0){
+    printf("\nPrimeiro valor: %d\n", LinkedList_prim(La));
+    printf("Ultimo valor: %d\n\n", LinkedList_ult(La));
 }else{
     printf("Lista Vazia!!!");
 }
@@ -187,9 +187,9 @@ LinkedList_add_last(Lb, 10);*/
 
 LinkedList_print(Lb);
 
-if(LinkedList_contagem(La) != 0){
-    printf("\nPrimeiro valor: %d\n", LinkedList_return_first(Lb));
-    printf("Ultimo valor: %d\n\n", LinkedList_return_last(Lb));
+if(LinkedList_numero_elem != 0){
+    printf("\nPrimeiro valor: %d\n", LinkedList_prim(Lb));
+    printf("Ultimo valor: %d\n\n", LinkedList_ult(Lb));
 }else{
     printf("Lista Vazia!!!");
 }
