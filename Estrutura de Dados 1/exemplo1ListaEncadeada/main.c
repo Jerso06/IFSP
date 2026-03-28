@@ -142,6 +142,78 @@ void LinkedList_copia(LinkedList *L, LinkedList *M){
     }
 }
 
+void LinkedList_copia_invertida(LinkedList *L, LinkedList *M){
+    Node *p = L->begin;
+
+    while(p != NULL){
+        LinkedList_add_first(M, p->val);
+        p = p->next;
+    }
+}
+
+void LinkedList_append(LinkedList *L, LinkedList *M){
+    Node *p = M->begin;
+
+    while(p != NULL){
+        LinkedList_add_last(L, p->val);
+        p = p->next;
+    }
+}
+
+void LinkedList_concatena(LinkedList *L, LinkedList *M, LinkedList *N){
+    Node *p = L->begin;
+
+    while(p != NULL){
+        LinkedList_add_last(N, p->val);
+        p = p->next;
+    }
+
+    p = M->begin;
+
+    while(p != NULL){
+        LinkedList_add_last(N, p->val);
+        p = p->next;
+    }
+}
+
+void LinkedList_transforma(LinkedList *L, LinkedList *M, LinkedList *N){
+    Node *p = L->begin;
+
+    while(p != NULL){
+        LinkedList_add_last(N, p->val);
+        LinkedList_remove(L, p->val);
+        p = L->begin;
+    }
+
+    p = M->begin;
+
+    while(p != NULL){
+        LinkedList_add_last(N, p->val);
+        LinkedList_remove(M, p->val);
+        p = M->begin;
+    }
+
+    L = NULL;
+    M = NULL;
+}
+
+void LinkedList_merge(LinkedList *L, LinkedList *M, LinkedList *N){
+    Node *p = L->begin;
+    Node *q = M->begin;
+
+    while(p != NULL || q != NULL){
+        if(p != NULL){
+            LinkedList_add_last(N, p->val);
+            p = p->next;
+        }
+
+        if(q != NULL){
+            LinkedList_add_last(N, q->val);
+            q = q->next;
+        }
+    }
+}
+
 void LinkedList_print(LinkedList *L) {
     Node *p = L->begin;
     printf("L -> ");
@@ -166,9 +238,6 @@ LinkedList_add_first(La,3);
 LinkedList_add_first(La,4);
 LinkedList_add_first(La,5);
 LinkedList_print(La);
-LinkedList_remove(La, 20);
-LinkedList_remove(La, 2);
-LinkedList_print(La);
 
 if(LinkedList_numero_elem(La) != 0){
     printf("\nPrimeiro valor: %d\n", LinkedList_prim(La));
@@ -178,13 +247,8 @@ if(LinkedList_numero_elem(La) != 0){
 }
 
 LinkedList *Lb = LinkedList_create();
-LinkedList_copia(La, Lb);
-/*LinkedList_add_last(Lb, 6);
-LinkedList_add_last(Lb, 7);
-LinkedList_add_last(Lb, 8);
-LinkedList_add_last(Lb, 9);
-LinkedList_add_last(Lb, 10);*/
-
+LinkedList_copia_invertida(La, Lb);
+printf("Lista Copiada de maneira invertida: \n");
 LinkedList_print(Lb);
 
 if(LinkedList_numero_elem != 0){
@@ -194,5 +258,51 @@ if(LinkedList_numero_elem != 0){
     printf("Lista Vazia!!!");
 }
 
+LinkedList_append(La, Lb);
+printf("Lista B adicionada na lista A: \n");
+LinkedList_print(La);
+
+if(LinkedList_numero_elem(La) != 0){
+    printf("\nPrimeiro valor: %d\n", LinkedList_prim(La));
+    printf("Ultimo valor: %d\n\n", LinkedList_ult(La));
+}else{
+    printf("Lista Vazia!!!");
+}
+
+LinkedList *Lc = LinkedList_create();
+LinkedList_concatena(La, Lb, Lc);
+printf("Lista Concatenada: \n");
+LinkedList_print(Lc);
+
+if(LinkedList_numero_elem(Lc) != 0){
+    printf("\nPrimeiro valor: %d\n", LinkedList_prim(Lc));
+    printf("Ultimo valor: %d\n", LinkedList_ult(Lc));
+}else{
+    printf("Lista Vazia!!!");
+}
+
+LinkedList *Ld = LinkedList_create();
+LinkedList_transforma(La, Lb, Ld);
+printf("Lista Transformada: \n");
+LinkedList_print(Ld);
+
+if(LinkedList_numero_elem(Ld) != 0){
+    printf("\nPrimeiro valor: %d\n", LinkedList_prim(Ld));
+    printf("Ultimo valor: %d\n", LinkedList_ult(Ld));
+}else{
+    printf("Lista Vazia!!!");
+}
+
+LinkedList *Le = LinkedList_create();
+LinkedList_merge(La, Lb, Le);
+printf("Lista Mergeada: \n");
+LinkedList_print(Le);
+
+if(LinkedList_numero_elem(Le) != 0){
+    printf("\nPrimeiro valor: %d\n", LinkedList_prim(Le));
+    printf("Ultimo valor: %d\n", LinkedList_ult(Le));
+}else{
+    printf("Lista Vazia!!!");
+}
 return (0);
 }
