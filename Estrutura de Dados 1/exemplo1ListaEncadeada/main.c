@@ -193,6 +193,8 @@ void LinkedList_transforma(LinkedList *L, LinkedList *M, LinkedList *N){
         p = M->begin;
     }
 
+    free(L);
+    free(M);
     L = NULL;
     M = NULL;
 }
@@ -281,18 +283,6 @@ if(LinkedList_numero_elem(Lc) != 0){
     printf("Lista Vazia!!!");
 }
 
-LinkedList *Ld = LinkedList_create();
-LinkedList_transforma(La, Lb, Ld);
-printf("Lista Transformada: \n");
-LinkedList_print(Ld);
-
-if(LinkedList_numero_elem(Ld) != 0){
-    printf("\nPrimeiro valor: %d\n", LinkedList_prim(Ld));
-    printf("Ultimo valor: %d\n", LinkedList_ult(Ld));
-}else{
-    printf("Lista Vazia!!!");
-}
-
 LinkedList *Le = LinkedList_create();
 LinkedList_merge(La, Lb, Le);
 printf("Lista Mergeada: \n");
@@ -301,6 +291,18 @@ LinkedList_print(Le);
 if(LinkedList_numero_elem(Le) != 0){
     printf("\nPrimeiro valor: %d\n", LinkedList_prim(Le));
     printf("Ultimo valor: %d\n", LinkedList_ult(Le));
+}else{
+    printf("Lista Vazia!!!");
+}
+
+LinkedList *Ld = LinkedList_create();
+LinkedList_transforma(La, Lb, Ld);
+printf("Lista Transformada: \n");
+LinkedList_print(Ld);
+
+if(LinkedList_numero_elem(Ld) != 0){
+    printf("\nPrimeiro valor: %d\n", LinkedList_prim(Ld));
+    printf("Ultimo valor: %d\n", LinkedList_ult(Ld));
 }else{
     printf("Lista Vazia!!!");
 }
