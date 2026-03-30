@@ -219,8 +219,6 @@ void LinkedList_merge(LinkedList *L, LinkedList *M, LinkedList *N){
 void LinkedList_print(LinkedList *L) {
     Node *p = L->begin;
     printf("L -> ");
-    // enquanto p n o chegou ao fim da lista, isto  ,
-    // enquanto p estiver apontando para um n  da lista
 
     while (p != NULL) {
         printf("%d ->", p->val);
@@ -306,5 +304,6 @@ if(LinkedList_numero_elem(Ld) != 0){
 }else{
     printf("Lista Vazia!!!");
 }
+
 return (0);
 }
