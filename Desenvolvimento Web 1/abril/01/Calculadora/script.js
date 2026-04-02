@@ -22,29 +22,36 @@ function calcular() {
             n1 = Number(resultado.substring(0, resultado.indexOf('+')));
             n2 = Number(resultado.substring(resultado.indexOf('+') + 1, resultado.length));
             somar(n1, n2);
-        } else if (resultado.indexOf('-') != -1) {
-            if (resultado.indexOf('-') == 0) {
-                n1 = Number(resultado.substring(0, resultado.indexOf('-')))
-            } else {
-                n1 = Number(resultado.substring(0, resultado.indexOf('-')));
+        } else if (resultado.includes('-')) {
+            let indiceOperador = resultado.indexOf('-', 1);
+
+            if (indiceOperador != -1) {
+                n1 = Number(resultado.substring(0, indiceOperador));
+                n2 = Number(resultado.substring(indiceOperador + 1, resultado.length));
+                subtrair(n1, n2);
+            } else if (resultado.startsWith('-')) {
+                finalizarExibicao(resultado);
             }
-            n2 = Number(resultado.substring(resultado.indexOf('-') + 1, resultado.length));
-            subtrair(n1, n2)
         } else if (resultado.indexOf('/') != -1) {
             n1 = Number(resultado.substring(0, resultado.indexOf('/')));
             n2 = Number(resultado.substring(resultado.indexOf('/') + 1, resultado.length));
-            dividir(n1, n2)
+            dividir(n1, n2);
         } else if (resultado.indexOf('*') != -1) {
             n1 = Number(resultado.substring(0, resultado.indexOf('*')));
             n2 = Number(resultado.substring(resultado.indexOf('*') + 1, resultado.length));
-            multiplicar(n1, n2)
-        } else {
-            resultado = resultado.replaceAll('.', ',');
-            document.getElementById("display").innerHTML = resultado;
+            multiplicar(n1, n2);
+        } 
+        else {
+            finalizarExibicao(resultado);
         }
     } else {
         clean();
     }
+}
+
+function finalizarExibicao(valor) {
+    valor = valor.toString().replaceAll('.', ',');
+    document.getElementById("display").innerHTML = valor;
 }
 
 function somar(n1, n2) {
@@ -74,55 +81,37 @@ function multiplicar(n1, n2) {
 function inverteSinal() {
     let resultado = document.getElementById("display").innerHTML;
 
-    if (resultado[0] == '-') {
-        resultado = resultado.substring(1, display.length);
-        document.getElementById("display").innerHTML = resultado;
-    } else {
-        resultado = '-' + resultado;
-        document.getElementById("display").innerHTML = resultado;
-    }
+    resultado = resultado.replaceAll('-', '#tmp#');
+    resultado = resultado.replaceAll('+', '-')
+    resultado = resultado.replaceAll('#tmp#', '+');
+
+    document.getElementById("display").innerHTML = resultado;
 }
 
 function verificaSinais(texto) {
     if (texto[0] == '*' || texto[0] == '/') {
         return false;
-    } else if (texto.indexOf("+") != -1) {
-        let pos = texto.indexOf("+");
-
-        if (texto[pos - 1] == '+' || texto[pos - 1] == '-' || texto[pos - 1] == '/' || texto[pos - 1] == '*') {
-            return false;
-        } else if (texto[pos + 1] == '+' || texto[pos + 1] == '-' || texto[pos + 1] == '/' || texto[pos + 1] == '*') {
-            return false;
-        }
     }
 
-    if (texto.indexOf("-") != -1) {
-        let pos = texto.indexOf("-");
+    const operadores = ['+', '-', '*', '/'];
 
-        if (texto[pos - 1] == '+' || texto[pos - 1] == '-' || texto[pos - 1] == '/' || texto[pos - 1] == '*') {
-            return false;
-        } else if (texto[pos + 1] == '+' || texto[pos + 1] == '-' || texto[pos + 1] == '/' || texto[pos + 1] == '*') {
-            return false;
-        }
-    }
+    for (let i = 0; i < texto.length; i++) {
+        let caractereAtual = texto[i];
+        let proximoCaractere = texto[i + 1];
 
-    if (texto.indexOf("/") != -1) {
-        let pos = texto.indexOf("/");
+        if (operadores.includes(caractereAtual)) {
+            
+            if (operadores.includes(proximoCaractere) && proximoCaractere !== '-') {
+                return false;
+            }
 
-        if (texto[pos - 1] == '+' || texto[pos - 1] == '-' || texto[pos - 1] == '/' || texto[pos - 1] == '*') {
-            return false;
-        } else if (texto[pos + 1] == '+' || texto[pos + 1] == '-' || texto[pos + 1] == '/' || texto[pos + 1] == '*') {
-            return false;
-        }
-    }
+            if (proximoCaractere === '-' && operadores.includes(texto[i + 2])) {
+                return false;
+            }
 
-    if (texto.indexOf("*") != -1) {
-        let pos = texto.indexOf("*");
-
-        if (texto[pos - 1] == '+' || texto[pos - 1] == '-' || texto[pos - 1] == '/' || texto[pos - 1] == '*') {
-            return false;
-        } else if (texto[pos + 1] == '+' || texto[pos + 1] == '-' || texto[pos + 1] == '/' || texto[pos + 1] == '*') {
-            return false;
+            if (i === texto.length - 1) {
+                return false;
+            }
         }
     }
 
