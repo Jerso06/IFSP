@@ -1,0 +1,71 @@
+#formato{
+    background-color: #b4b4b4;
+    width: 14%;
+    margin: auto;
+    margin-top: 10%;
+    padding: 1%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid black;
+    border-radius:10px;
+    box-shadow: 1px 1px 10px black,
+                -1px -1px 10px black;
+}
+
+#botoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 6px;
+}
+
+#display{
+    background-color: white;
+    height: 8vh;
+    margin-bottom: 8%;
+
+    padding: 2%;
+    font: normal bold 1.5rem black Arial,sans-serif;
+    text-align: start;
+}
+
+#equal{
+    background-color: rgb(50, 50, 252);
+}
+
+#equal:hover{
+    background-color: rgb(1, 1, 182);
+    cursor: pointer;
+}
+
+button{
+    background-color: rgb(29, 29, 29);
+    color: white;
+
+    font-size: 1.3rem;
+
+    border: none;
+    border-radius: 8px;
+    height: 4vh;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(54, 54, 54);
+}
+
+h1{
+    font: normal bold 2.4rem black Arial,sans-serif;
+}
+
+.operation{
+    background-color: aqua;
+    color: black;
+}
+
+.operation:hover{
+    background-color: rgb(110, 255, 255);
+    cursor: pointer;
+}
