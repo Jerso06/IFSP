@@ -1,6 +1,6 @@
 #formato{
     background-color: #b4b4b4;
-    width: 14%;
+    width: 18%;
     margin: auto;
     margin-top: 10%;
     padding: 1%;
@@ -60,6 +60,11 @@ h1{
     font: normal bold 2.4rem black Arial,sans-serif;
 }
 
+h6{
+    margin-top: -6%;
+    font: normal bold 0.8rem black Arial,sans-serif;
+}
+
 .operation{
     background-color: aqua;
     color: black;
@@ -68,4 +73,10 @@ h1{
 .operation:hover{
     background-color: rgb(110, 255, 255);
     cursor: pointer;
+}
+
+@media (max-width:1280px){
+    #formato{
+        width: 20%;
+    }
 }
