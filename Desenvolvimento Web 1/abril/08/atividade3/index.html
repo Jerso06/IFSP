@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="formato">
+        <h1>Sorteador de Números</h1>
+
+        <form action="">
+            <label>Quantidade de Números sorteados:</label>
+            <input type="number" name="qtd_numeros" id="qtd_numeros">
+
+            <label>Entre:</label>
+            <input type="number" name="entre" id="entre">
+
+            <label>Até:</label>
+            <input type="number" name="ate" id="ate">
+
+            <button type="button" onclick="sortear()">Sortear</button>
+        </form>
+
+        <h1 id="sorteio">Números Sorteados:</h1>
+        <div id="numsSorteados"></div>
+        <div id="alerta"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

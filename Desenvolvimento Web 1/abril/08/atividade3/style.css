@@ -1,0 +1,91 @@
+body{
+    background-color: #F8F9FA;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#formato{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 2%;
+    padding: 0 1% 0 1%;
+    background-color: white;
+
+    border-radius: 12px;
+    box-shadow: 1px 1px 10px black;
+}
+
+#sorteio{
+    margin-top: 8%;
+}
+
+#numsSorteados{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    
+    margin: 0 10% 0 10%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 1rem;
+}
+
+input{
+    margin-top: 1%;
+    margin-bottom: 3%;
+    height: 4vh;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input:hover{
+    border-color: rgb(104, 104, 104);
+}
+
+input:focus{
+    border-color: blue;
+    outline: none;
+}
+
+/*remover setas do input number*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button{
+    height: 5vh;
+    background-color: #ff07de;
+
+    border: none;
+    border-radius: 8px;
+
+    color: white;
+    font: normal bold 1.2rem Arial, sans-serif;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #ff37e4;
+}
+
+p{
+    text-align: center;
+    background-color: rgb(254, 90, 246);
+    border-radius: 20px;
+    height: 4vh;
+    width: 60%;
+    padding: 2% 0 2% 0;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+}
