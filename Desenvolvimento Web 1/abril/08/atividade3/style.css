@@ -75,14 +75,14 @@ button{
 
 button:hover{
     cursor: pointer;
-    background-color: #ff37e4;
+    background-color: #ff5ae9;
 }
 
 p{
     text-align: center;
     background-color: rgb(254, 90, 246);
     border-radius: 20px;
-    height: 4vh;
+    height: 3vh;
     width: 60%;
     padding: 2% 0 2% 0;
 
