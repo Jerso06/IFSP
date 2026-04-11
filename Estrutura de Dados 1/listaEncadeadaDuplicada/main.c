@@ -77,7 +77,7 @@ void LinkedList_remove(LinkedList *L, int valor){
     Node *ante = NULL;
     Node *pos = NULL;
 
-    if(L->begin != NULL){ //lista vazia
+    if(L->begin != NULL){ //lista  não vazia
         if(L->begin->val == valor){ // primeiro nó
             if(L->begin->next == NULL){ // unico nó
                 pos = L->begin;
@@ -85,6 +85,7 @@ void LinkedList_remove(LinkedList *L, int valor){
                 L->begin = NULL;
                 L->end = NULL;
             }else{ //remover primeiro elemento
+                pos = L->begin;
                 L->begin = pos->next;
                 L->begin->prev = NULL;
                 free(pos);
@@ -102,13 +103,12 @@ void LinkedList_remove(LinkedList *L, int valor){
                     ante->next = pos->next;
                     pos->next->prev = ante;
                     free(pos);
-                    L->cont--;
                 }else{ // é o último
                     ante->next = NULL;
                     free(pos);
                     L->end = ante;
-                    L->cont--;
                 }
+                L->cont--;
             }
         }
     }
@@ -233,81 +233,22 @@ void LinkedList_print(LinkedList *L) {
 
 int main (){
 
-
 LinkedList *La = LinkedList_create();
 
-LinkedList_add_first(La,1);
-LinkedList_add_first(La,2);
-LinkedList_add_first(La,3);
-LinkedList_add_first(La,4);
 LinkedList_add_first(La,5);
+LinkedList_add_first(La,4);
+LinkedList_add_first(La,3);
+LinkedList_add_first(La,2);
+LinkedList_add_first(La,1);
 LinkedList_print(La);
-
-if(LinkedList_numero_elem(La) != 0){
-    printf("\nPrimeiro valor: %d\n", LinkedList_prim(La));
-    printf("Ultimo valor: %d\n\n", LinkedList_ult(La));
-}else{
-    printf("Lista Vazia!!!");
-}
 
 LinkedList *Lb = LinkedList_create();
-LinkedList_copia_invertida(La, Lb);
-printf("Lista Copiada de maneira invertida: \n");
+LinkedList_add_last(Lb,5);
+LinkedList_add_last(Lb,4);
+LinkedList_add_last(Lb,3);
+LinkedList_add_last(Lb,2);
+LinkedList_add_last(Lb,1);
 LinkedList_print(Lb);
-
-if(LinkedList_numero_elem != 0){
-    printf("\nPrimeiro valor: %d\n", LinkedList_prim(Lb));
-    printf("Ultimo valor: %d\n\n", LinkedList_ult(Lb));
-}else{
-    printf("Lista Vazia!!!");
-}
-
-LinkedList_append(La, Lb);
-printf("Lista B adicionada na lista A: \n");
-LinkedList_print(La);
-
-if(LinkedList_numero_elem(La) != 0){
-    printf("\nPrimeiro valor: %d\n", LinkedList_prim(La));
-    printf("Ultimo valor: %d\n\n", LinkedList_ult(La));
-}else{
-    printf("Lista Vazia!!!");
-}
-
-LinkedList *Lc = LinkedList_create();
-LinkedList_concatena(La, Lb, Lc);
-printf("Lista Concatenada: \n");
-LinkedList_print(Lc);
-
-if(LinkedList_numero_elem(Lc) != 0){
-    printf("\nPrimeiro valor: %d\n", LinkedList_prim(Lc));
-    printf("Ultimo valor: %d\n", LinkedList_ult(Lc));
-}else{
-    printf("Lista Vazia!!!");
-}
-
-LinkedList *Le = LinkedList_create();
-LinkedList_merge(La, Lb, Le);
-printf("Lista Mergeada: \n");
-LinkedList_print(Le);
-
-if(LinkedList_numero_elem(Le) != 0){
-    printf("\nPrimeiro valor: %d\n", LinkedList_prim(Le));
-    printf("Ultimo valor: %d\n", LinkedList_ult(Le));
-}else{
-    printf("Lista Vazia!!!");
-}
-
-LinkedList *Ld = LinkedList_create();
-LinkedList_transforma(La, Lb, Ld);
-printf("Lista Transformada: \n");
-LinkedList_print(Ld);
-
-if(LinkedList_numero_elem(Ld) != 0){
-    printf("\nPrimeiro valor: %d\n", LinkedList_prim(Ld));
-    printf("Ultimo valor: %d\n", LinkedList_ult(Ld));
-}else{
-    printf("Lista Vazia!!!");
-}
 
 return (0);
 }
