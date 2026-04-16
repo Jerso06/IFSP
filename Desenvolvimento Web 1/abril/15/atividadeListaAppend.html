@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Frutas</title>
+</head>
+<body>
+    <button type="button" onclick="gerar()">Gerar Lista</button>
+
+    <div id="lista">
+
+    </div>
+
+    <script>
+        function gerar(){
+            const frutas = [
+  "abacate",
+  "abacaxi",
+  "acerola",
+  "ameixa",
+  "amora",
+  "banana",
+  "caju",
+  "carambola",
+  "cereja",
+  "coco",
+  "figo",
+  "framboesa",
+  "goiaba",
+  "graviola",
+  "jabuticaba",
+  "jaca",
+  "kiwi",
+  "laranja",
+  "limão",
+  "maçã",
+  "mamão",
+  "manga",
+  "maracujá",
+  "melancia",
+  "melão",
+  "morango",
+  "nectarina",
+  "pera",
+  "pêssego",
+  "pitanga",
+  "romã",
+  "tangerina",
+  "uva",
+  "umbu",
+  "cupuaçu",
+  "açaí",
+  "cambuci",
+  "physalis",
+  "lichia",
+  "longan",
+  "rambutan",
+  "durian",
+  "jackfruit",
+  "sapoti",
+  "seriguela",
+  "cajá",
+  "pequi",
+  "bacaba",
+  "buriti",
+  "murici",
+  "araticum"
+];
+            let listaFrutas = document.createElement("ol");
+            document.getElementById('lista').appendChild(listaFrutas);
+            for(item of frutas){
+                let fruta = document.createElement('li');
+                fruta.innerHTML = item;
+                listaFrutas.appendChild(fruta);
+            }
+
+            
+        }
+        
+    </script>
+</body>
+</html>

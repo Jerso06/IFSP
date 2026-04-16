@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste DOM</title>
+</head>
+<body>
+    <p id="demo">Teste</p>
+    <p class="quaseTitulo">Teste 2</p>
+    <p>Teste 3</p>
+
+    <script>
+        let id = document.getElementById("demo");
+        console.log(id);
+
+        let query = document.querySelector('p');
+        console.log(query);
+
+        let querys = document.querySelectorAll('p');
+        console.log(querys);
+
+        let tagName = document.getElementsByTagName('p');
+        console.log(tagName);
+
+        let titulo = document.getElementsByClassName('quaseTitulo');
+        console.log(titulo);
+
+        let quaseTitulo = document.querySelector('.quaseTitulo');
+        console.log(quaseTitulo);
+
+        querys.forEach(elemento=>{
+            console.log(elemento.innerHTML);
+        });
+    </script>
+</body>
+</html>

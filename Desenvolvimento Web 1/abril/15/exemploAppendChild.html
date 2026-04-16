@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Child</title>
+
+    <style>
+        div{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p>teste</p>
+
+    <div id="header"></div>
+    
+    <script>
+        let titulo = document.createElement('h1');
+        titulo.innerHTML = "Titulo de Macho";
+        document.getElementById("header").appendChild(titulo);
+    </script>
+</body>
+</html>
