@@ -47,9 +47,11 @@ void LinkedList_add_first(LinkedList *L, int val) {
     if (L->begin == NULL){   //se a lista esta vazia
         L->begin = p;
         L->end = p;
-
+        p->next = p;
+        p->prev = p;
     } else {
         p->next = L->begin;
+        p->prev = L->end;
         L->begin->prev = p;
         L->begin = p;
     }
@@ -63,15 +65,18 @@ void LinkedList_add_last(LinkedList *L, int val){
     if(L->begin != NULL){ // lista não vazia
         L->end->next = p;
         p->prev = L->end;
+        p->next = L->begin;
         L->end = p;
     }else{
         L->begin = p;
         L->end = p;
+        p->next = p;
+        p->prev = p;
     }
 
     L->cont++;
-}
 
+}
 void LinkedList_remove(LinkedList *L, int valor){
 
     Node *ante = NULL;
@@ -79,7 +84,7 @@ void LinkedList_remove(LinkedList *L, int valor){
 
     if(L->begin != NULL){ //lista  não vazia
         if(L->begin->val == valor){ // primeiro nó
-            if(L->begin->next == NULL){ // unico nó
+            if(L->cont == 1){ // unico nó
                 pos = L->begin;
                 free(pos);
                 L->begin = NULL;
@@ -87,24 +92,26 @@ void LinkedList_remove(LinkedList *L, int valor){
             }else{ //remover primeiro elemento
                 pos = L->begin;
                 L->begin = pos->next;
-                L->begin->prev = NULL;
+                L->begin->prev = pos->prev;
                 free(pos);
             }
             L->cont--;
         }else{ //remover elemento no meio/final
             pos = L->begin->next;
             ante = L->begin;
-            while(pos != NULL && pos->val != valor){
+            int contador = 0;
+            while(contador < L->cont && pos->val != valor){
                 ante = pos;
                 pos = pos->next;
+                contador++;
             }
-            if(pos != NULL){
-                if(pos->next != NULL){ // não é o último elemento
+            if(contador < L->cont){
+                if(contador != L->cont){ // não é o último elemento
                     ante->next = pos->next;
                     pos->next->prev = ante;
                     free(pos);
                 }else{ // é o último
-                    ante->next = NULL;
+                    ante->next = L->begin;
                     free(pos);
                     L->end = ante;
                 }
@@ -138,62 +145,76 @@ int LinkedList_ult(LinkedList *L){
 
 void LinkedList_copia(LinkedList *L, LinkedList *M){
     Node *p = L->begin;
+    int contador = 0;
 
-    while(p != NULL){
+    while(contador < L->cont){
         LinkedList_add_last(M, p->val);
         p = p->next;
+        contador++;
     }
 }
 
 void LinkedList_copia_invertida(LinkedList *L, LinkedList *M){
     Node *p = L->begin;
+    int contador = 0;
 
-    while(p != NULL){
+    while(contador < L->cont){
         LinkedList_add_first(M, p->val);
         p = p->next;
+        contador++;
     }
 }
 
 void LinkedList_append(LinkedList *L, LinkedList *M){
     Node *p = M->begin;
+    int contador = 0;
 
-    while(p != NULL){
+    while(contador < M->cont){
         LinkedList_add_last(L, p->val);
         p = p->next;
+        contador++;
     }
 }
 
 void LinkedList_concatena(LinkedList *L, LinkedList *M, LinkedList *N){
     Node *p = L->begin;
+    int contador = 0;
 
-    while(p != NULL){
+    while(contador < L->cont){
         LinkedList_add_last(N, p->val);
         p = p->next;
+        contador++;
     }
 
     p = M->begin;
+    contador = 0;
 
-    while(p != NULL){
+    while(contador < M->cont){
         LinkedList_add_last(N, p->val);
         p = p->next;
+        contador++;
     }
 }
 
 void LinkedList_transforma(LinkedList *L, LinkedList *M, LinkedList *N){
     Node *p = L->begin;
+    int contador = 0, contL = L->cont, contM = M->cont;
 
-    while(p != NULL){
+    while(contador <contL){
         LinkedList_add_last(N, p->val);
         LinkedList_remove(L, p->val);
         p = L->begin;
+        contador++;
     }
 
     p = M->begin;
+    contador = 0;
 
-    while(p != NULL){
+    while(contador < contM){
         LinkedList_add_last(N, p->val);
         LinkedList_remove(M, p->val);
         p = M->begin;
+        contador++;
     }
 
     free(L);
@@ -205,41 +226,49 @@ void LinkedList_transforma(LinkedList *L, LinkedList *M, LinkedList *N){
 void LinkedList_merge(LinkedList *L, LinkedList *M, LinkedList *N){
     Node *p = L->begin;
     Node *q = M->begin;
+    int contL = 0, contM = 0;
 
-    while(p != NULL || q != NULL){
-        if(p != NULL){
+    while(contL < L->cont || contM < M->cont){
+        if(contL < L->cont){
             LinkedList_add_last(N, p->val);
             p = p->next;
+            contL++;
         }
 
-        if(q != NULL){
+        if(contM < M->cont){
             LinkedList_add_last(N, q->val);
             q = q->next;
+            contM++;
         }
     }
 }
 
 void LinkedList_print(LinkedList *L) {
     Node *p = L->begin;
+    int contador = 0;
     printf("L -> ");
 
-    while (p != NULL) {
+    while (contador < L->cont) {
         printf("%d ->", p->val);
         p = p->next;
+        contador++;
     }
-    printf(" NULL  \n");
+    printf(" Fim do Ciclo  \n");
     printf("Quantidade de nos na lista: %d\n\n", LinkedList_numero_elem(L));
 }
 
 void LinkedList_print_reverso(LinkedList *L) {
-    Node *p = L->end;;
+    Node *p = L->end;
+    int contador = 0;
+
     printf("L -> ");
 
-    while (p != NULL) {
+    while (contador < L->cont) {
         printf("%d <-", p->val);
         p = p->prev;
+        contador++;
     }
-    printf(" NULL  \n");
+    printf(" Fim do Ciclo  \n");
     printf("Quantidade de nos na lista: %d\n\n", LinkedList_numero_elem(L));
 }
 
@@ -296,8 +325,6 @@ printf("Copia com print reverso: \n");
 LinkedList *Li = LinkedList_create();
 LinkedList_copia(Lh, Li);
 LinkedList_print_reverso(Li);
-
-
 
 return (0);
 }
