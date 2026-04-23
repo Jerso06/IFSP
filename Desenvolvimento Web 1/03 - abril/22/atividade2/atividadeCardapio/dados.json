@@ -1,0 +1,27 @@
+[
+  {
+    "nome": "Pizza",
+    "desc": "Massa crocante com molho de tomate artesanal, queijo derretido e ingredientes selecionados.",
+    "preco": 50.75
+  },
+  {
+    "nome": "Hamburguer",
+    "desc": "Pão macio, carne suculenta grelhada, queijo, alface, tomate e molho especial da casa.",
+    "preco": 30.99
+  },
+  {
+    "nome": "Calzone",
+    "desc": "Massa assada recheada com queijo, presunto e temperos, dourada por fora e cremosa por dentro.",
+    "preco": 13.13
+  },
+  {
+    "nome": "Coca-Cola",
+    "desc": "Refrigerante clássico, gelado e refrescante, perfeito para acompanhar sua refeição.",
+    "preco": 10.9
+  },
+  {
+    "nome": "Peixe-Frito",
+    "desc": "Filé de peixe empanado e frito, crocante por fora e macio por dentro, servido bem quente.",
+    "preco": 17.8
+  }
+]
