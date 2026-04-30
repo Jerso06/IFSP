@@ -1,0 +1,58 @@
+#camposDisponiveis{
+    background-color: aqua;
+}
+
+#camposRelatorio{
+    background-color: rgb(189, 119, 255);
+}
+
+#divisao{
+    width: 90%;
+}
+
+#campos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+button{
+    display: flex;
+    margin: auto;
+    margin-top: 2%;
+
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 4vh;
+
+    background-color: #2C3E50;
+    font: 1.1rem bold small-caps Arial, sans-serif;
+    color: white;
+}
+
+li{
+    background-color: bisque;
+}
+
+main{
+    width: 50%;
+    margin: auto;
+    background-color: brown;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    text-align: center;
+    font: 1.8rem bold small-caps Arial, sans-serif;
+}
+
+h1{
+    font: 2.2rem bold small-caps Arial, sans-serif;
+}
+hr{
+    width: 90%;
+}
