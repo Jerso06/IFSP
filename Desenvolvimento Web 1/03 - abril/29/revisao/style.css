@@ -6,6 +6,11 @@
     background-color: rgb(189, 119, 255);
 }
 
+#camposDisponiveis, #camposRelatorio{
+    border-radius: 8px;
+    height: 30vh;
+}
+
 #divisao{
     width: 90%;
 }
@@ -36,9 +41,9 @@ li{
 }
 
 main{
-    width: 50%;
+    width: 40%;
     margin: auto;
-    background-color: brown;
+    background-color: #F4F7F6;
 
     display: flex;
     flex-direction: column;
@@ -51,8 +56,15 @@ h2{
 }
 
 h1{
-    font: 2.2rem bold small-caps Arial, sans-serif;
+    font: 2.2rem Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-variant: small-caps;
+    color: #2B3D50;
 }
 hr{
     width: 90%;
+    height: 1px;
+    border: none;
+    background-color: green;
 }
