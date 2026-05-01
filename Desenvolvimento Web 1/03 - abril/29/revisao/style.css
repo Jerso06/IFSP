@@ -1,70 +1,125 @@
-#camposDisponiveis{
-    background-color: aqua;
-}
-
-#camposRelatorio{
-    background-color: rgb(189, 119, 255);
-}
-
-#camposDisponiveis, #camposRelatorio{
+#camposDisponiveis,
+#camposRelatorio {
     border-radius: 8px;
-    height: 30vh;
+    background-color: white;
+    height: 35vh;
 }
 
-#divisao{
+#divisao {
     width: 90%;
 }
 
-#campos{
+#campos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
 
-button{
+button {
     display: flex;
     margin: auto;
     margin-top: 2%;
+    margin-bottom: 5%;
 
     justify-content: center;
     align-items: center;
     width: 40%;
-    height: 4vh;
+    height: 6vh;
 
     background-color: #2C3E50;
     font: 1.1rem bold small-caps Arial, sans-serif;
     color: white;
+
+    cursor: pointer;
 }
 
-li{
-    background-color: bisque;
+button:hover{
+    background-color: #445e79;
 }
 
-main{
-    width: 40%;
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: rgb(241, 240, 239);
+    margin: 2%;
+    padding-left: 3%;
+    height: 5vh;
+
+    font: 1.2rem Arial, sans-serif;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 4px;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+li.campoD {
+    border-left: 3px solid rgb(39, 133, 255);
+}
+
+li.campoR{
+    border-left: 3px solid rgb(255, 31, 31);
+}
+
+main {
+    width: 50%;
     margin: auto;
-    background-color: #F4F7F6;
+    background-color: #e3e7e6;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h2{
+h2 {
     text-align: center;
     font: 1.8rem bold small-caps Arial, sans-serif;
 }
 
-h1{
+h1 {
     font: 2.2rem Arial, sans-serif;
     font-weight: bold;
     font-style: normal;
     font-variant: small-caps;
     color: #2B3D50;
 }
-hr{
-    width: 90%;
+
+hr {
+    width: 95%;
     height: 1px;
     border: none;
-    background-color: green;
+    background-color: rgb(202, 202, 202);
+}
+
+table {
+    margin-bottom: 5%;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+th {
+    background: #ffb618;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+    text-align: center;
+}
+
+tr:hover {
+    background: #ececec;
 }

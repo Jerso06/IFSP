@@ -1,57 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Revisão</title>
-  </head>
-  <body>
-    <main>
-      <h1>Configurador de Relatório</h1>
 
-      <div id="divisao">
-        <div id="campos">
-          <div id="camposDisponiveis">
-            <h2>Campos Disponíveis</h2>
-            <hr />
-            <ul id="listaDisponiveis">
-              <li
-                class="campoD"
-                id="idRegistro"
-                onclick="passarCampo('idRegistro')"
-              >
-                ID do Registro
-              </li>
-              <li class="campoD" id="nome" onclick="passarCampo('nome')">
-                Nome do Cliente
-              </li>
-              <li class="campoD" id="cidade" onclick="passarCampo('cidade')">
-                Cidade
-              </li>
-              <li class="campoD" id="valor" onclick="passarCampo('valor')">
-                Valor da Venda
-              </li>
-            </ul>
-          </div>
-          <div id="camposRelatorio">
-            <h2>Campos no Relatório</h2>
-            <hr />
-            <ul id="listaRelatorios"></ul>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Revisão</title>
+</head>
+
+<body>
+  <main>
+    <h1>Configurador de Relatório</h1>
+
+    <div id="divisao">
+      <div id="campos">
+        <div id="camposDisponiveis">
+          <h2>Campos Disponíveis</h2>
+          <hr />
+          <ul id="listaDisponiveis">
+            <li class="campoD" id="idRegistro" onclick="passarCampo('idRegistro')">
+              ID do Registro
+            </li>
+            <li class="campoD" id="nome" onclick="passarCampo('nome')">
+              Nome do Cliente
+            </li>
+            <li class="campoD" id="cidade" onclick="passarCampo('cidade')">
+              Cidade
+            </li>
+            <li class="campoD" id="valor" onclick="passarCampo('valor')">
+              Valor da Venda
+            </li>
+          </ul>
         </div>
-
-        <button type="button" onclick="gerarTabela()">
-          Gerar Relatórios com Dados JSON
-        </button>
+        <div id="camposRelatorio">
+          <h2>Campos no Relatório</h2>
+          <hr />
+          <ul id="listaRelatorios"></ul>
+        </div>
       </div>
 
-      <div id="resultado">
-        <table id="tabelaResultado">
-        </table>
-      </div>
-    </main>
+      <button type="button" onclick="gerarTabela()">
+        Gerar Relatórios com Dados JSON
+      </button>
+    </div>
 
-    <script src="script.js"></script>
-  </body>
+    <div id="resultado">
+      <table id="tabelaResultado">
+      </table>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
