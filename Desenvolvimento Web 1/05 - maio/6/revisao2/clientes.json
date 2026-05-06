@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "nome": "Ana Silva",
+        "cidade": "São Paulo",
+        "vendas": 1500.5
+    },
+    {
+        "id": 2,
+        "nome": "Bruno Oliveira",
+        "cidade": "Rio de Janeiro",
+        "vendas": 2300.0
+    },
+    {
+        "id": 3,
+        "nome": "Carla Santos",
+        "cidade": "Belo Horizonte",
+        "vendas": 850.75
+    },
+    {
+        "id": 4,
+        "nome": "Diego Souza",
+        "cidade": "Curitiba",
+        "vendas": 3100.2
+    },
+    {
+        "id": 5,
+        "nome": "Elena Costa",
+        "cidade": "Porto Alegre",
+        "vendas": 1200.0
+    },
+    {
+        "id": 6,
+        "nome": "Fabio Lima",
+        "cidade": "Salvador",
+        "vendas": 450.3
+    },
+    {
+        "id": 7,
+        "nome": "Gisele Rocha",
+        "cidade": "Recife",
+        "vendas": 2750.6
+    },
+    {
+        "id": 8,
+        "nome": "Hugo Almeida",
+        "cidade": "Fortaleza",
+        "vendas": 1900.0
+    },
+    {
+        "id": 9,
+        "nome": "Iara Martins",
+        "cidade": "Brasília",
+        "vendas": 5400.9
+    },
+    {
+        "id": 10,
+        "nome": "João Pereira",
+        "cidade": "Goiânia",
+        "vendas": 320.45
+    },
+    {
+        "id": 11,
+        "nome": "Karina Mendes",
+        "cidade": "Manaus",
+        "vendas": 1650.0
+    },
+    {
+        "id": 12,
+        "nome": "Lucas Fernandes",
+        "cidade": "Belém",
+        "vendas": 2100.15
+    },
+    {
+        "id": 13,
+        "nome": "Mariana Alves",
+        "cidade": "Florianópolis",
+        "vendas": 3900.0
+    },
+    {
+        "id": 14,
+        "nome": "Natan Ribeiro",
+        "cidade": "Vitória",
+        "vendas": 720.8
+    },
+    {
+        "id": 15,
+        "nome": "Olivia Castro",
+        "cidade": "Natal",
+        "vendas": 1100.25
+    },
+    {
+        "id": 16,
+        "nome": "Paulo Barbosa",
+        "cidade": "São Luís",
+        "vendas": 2800.5
+    },
+    {
+        "id": 17,
+        "nome": "Quênia Lopes",
+        "cidade": "Maceió",
+        "vendas": 1350.0
+    },
+    {
+        "id": 18,
+        "nome": "Ricardo Gomes",
+        "cidade": "Teresina",
+        "vendas": 980.6
+    },
+    {
+        "id": 19,
+        "nome": "Sonia Vieira",
+        "cidade": "Campo Grande",
+        "vendas": 2500.0
+    },
+    {
+        "id": 20,
+        "nome": "Tiago Nunes",
+        "cidade": "Cuiabá",
+        "vendas": 4200.35
+    }
+]
