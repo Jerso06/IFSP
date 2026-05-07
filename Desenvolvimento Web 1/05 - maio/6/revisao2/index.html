@@ -1,39 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Revisão 2</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <main>
-        <h1>Painel de Consulta de Clientes</h1>
+      <h1>Painel de Consulta de Clientes</h1>
 
-        <div id="divFiltros">
-            <div class="filtros">
-                <label for="id">Filtrar por ID</label>
-                <input type="text" id="id" placeholder="Ex: 1">
-            </div>
-            <div class="filtros">
-                <label for="id">Filtrar por ID</label>
-                <input type="text" id="id" placeholder="Ex: 1">
-            </div>
-            <div class="filtros">
-                <label for="id">Filtrar por ID</label>
-                <input type="text" id="id" placeholder="Ex: 1">
-            </div>
-            <div class="filtros">
-                <label for="id">Filtrar por ID</label>
-                <input type="text" id="id" placeholder="Ex: 1">
-            </div>
+      <div id="divFiltros">
+        <div class="filtros">
+          <label for="id">Filtrar por ID</label>
+          <input
+            type="text"
+            id="id"
+            placeholder="Ex: 1"
+            onkeyup="filtrarDados()"
+          />
         </div>
+        <div class="filtros">
+          <label for="nome">Filtrar por Nome</label>
+          <input
+            type="text"
+            id="nome"
+            placeholder="Digite o nome..."
+            onkeyup="filtrarDados()"
+          />
+        </div>
+        <div class="filtros">
+          <label for="cidade">Filtrar por Cidade</label>
+          <input
+            type="text"
+            id="cidade"
+            placeholder="Digite a cidade..."
+            onkeyup="filtrarDados()"
+          />
+        </div>
+        <div class="filtros">
+          <label for="vendas">Vendas Mínimas</label>
+          <input
+            type="text"
+            id="vendas"
+            placeholder="Ex: 1000"
+            onkeyup="filtrarDados()"
+          />
+        </div>
+      </div>
+
+      <div id="tabelaResultados">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Cidade</th>
+              <th>Vendas (R$)</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </main>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

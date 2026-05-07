@@ -1,0 +1,96 @@
+main{
+    width: 50%;
+    padding: 0 1% 1% 1%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #F8F9FA;
+    border-radius: 10px;
+
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+thead{
+    background-color: #3798D8;
+    width: 100%;
+}
+
+th{
+    padding: 1%;
+    text-align: start;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: white;
+    
+}
+
+tbody>tr{
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+td{
+    padding: 1%;
+    text-align: start;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+
+h1{
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: #2C3E4F;
+}
+
+label{
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+input{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 3vh;
+    padding-left: 3%;
+}
+
+input:focus{
+    outline-color: #0B5FC9;
+    border-color: #0B5FC9;
+}
+
+
+#divFiltros{
+    width: 95%;
+    padding: 1%;
+    margin-bottom: 2%;
+    background-color: #ECF0F1;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#tabelaResultados{
+    width: 100%;
+}
+
+.filtros{
+    display: flex;
+    flex-direction: column;
+}
