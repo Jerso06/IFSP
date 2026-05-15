@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1778873956 source:c:\users\jedso\onedrive\Área de trabalho\ifsp\estrutura de dados 1\exemplopilha\main.c
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+
