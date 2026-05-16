@@ -64,9 +64,9 @@ void Fila_dequeue(Fila *F){
         F->end = NULL;
         free(n);
     }else{
-        n = F->end;
-        n->prev->next = NULL;
-        F->end = n->prev;
+        n = F->begin;
+        n->next->prev = NULL;
+        F->begin = n->next;
         free(n);
     }
 
@@ -74,7 +74,7 @@ void Fila_dequeue(Fila *F){
 }
 
 int Fila_peek(Fila *F){
-    return F->end->val;
+    return F->begin->val;
 }
 
 //fun��es �teis
@@ -100,39 +100,36 @@ int Fila_ult(Fila *F){
 }
 
 void Fila_print(Fila *F) {
-    Node *n = F->end;
-    printf("Topo da pilha: \n");
+    Node *n = F->begin;
+    printf("Inicio da fila: ->");
 
     while (n != NULL) {
-        printf(" - %d \n", n->val);
-        n = n->prev;
+        printf(" %d ->", n->val);
+        n = n->next;
     }
-    printf("Comeco da pilha  \n\n");
-    printf("Quantidade de nos na pilha: %d\n", Fila_numero_elem(F));
+    printf("Fim da fila\n\n");
+    printf("Quantidade de nos na fila: %d\n", Fila_numero_elem(F));
 }
 
 int main (){
 
+Fila *fila1 = Fila_create();
 
-/*Pilha *pilha1 = Pilha_create();
+Fila_enqueue(fila1, 1);
+Fila_enqueue(fila1, 2);
+Fila_enqueue(fila1, 3);
+Fila_enqueue(fila1, 4);
+Fila_enqueue(fila1, 5);
 
-Pilha_push(pilha1, 1);
-Pilha_push(pilha1, 2);
-Pilha_push(pilha1, 3);
-Pilha_push(pilha1, 4);
-Pilha_push(pilha1, 5);
-Pilha_pop(pilha1);
-Pilha_push(pilha1, 1);
-Pilha_push(pilha1, 2);
-Pilha_push(pilha1, 3);
-Pilha_pop(pilha1);
-Pilha_push(pilha1, 4);
-Pilha_push(pilha1, 5);
-Pilha_pop(pilha1);
+Fila_dequeue(fila1);
+Fila_dequeue(fila1);
 
-Pilha_print(pilha1);
+Fila_enqueue(fila1, 6);
+Fila_enqueue(fila1, 7);
 
-printf("\nElemento do topo: %d", Pilha_peek(pilha1));
-*/
+Fila_print(fila1);
+
+printf("\nElemento do inicio da fila: %d\n", Fila_peek(fila1));
+
 return (0);
 }
