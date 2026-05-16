@@ -57,6 +57,7 @@ void Pilha_pop(Pilha *P){
 
     if(P->tamanho == 0){
         printf("\nPilha vazia\n");
+        return;
     }else if(P->tamanho == 1){
         n = P->begin;
         P->begin = NULL;
