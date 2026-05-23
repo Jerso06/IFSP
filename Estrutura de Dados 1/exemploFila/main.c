@@ -147,7 +147,7 @@ int Fila_peek(Fila *F){
     return F->begin->val;
 }
 
-Fila* Fila_Pilha_inverte_fila(Fila *F){
+Fila* Inverte_fila(Fila *F){
     Pilha *P = Pilha_create();
 
     while(!Fila_queue_is_empty(F)){
@@ -158,6 +158,23 @@ Fila* Fila_Pilha_inverte_fila(Fila *F){
     }
 
     free(P);
+    return F;
+}
+
+Fila* Pilha_dequeue(Fila *F){
+    Fila *filaAux = Fila_create();
+
+    while(!Fila_queue_is_empty(F)){
+        Pilha_push(filaAux, Pilha_pop(F));
+    }
+
+    Pilha_pop(filaAux);
+
+    while(!Fila_queue_is_empty(filaAux)){
+        Pilha_push(F, Pilha_pop(filaAux));
+    }
+
+    free(filaAux);
     return F;
 }
 
@@ -221,7 +238,11 @@ Fila_print(fila1);
 printf("\nElemento do inicio da fila: %d\n\n", Fila_peek(fila1));
 
 
-Fila_Pilha_inverte_fila(fila1);
+Inverte_fila(fila1);
+Fila_print(fila1);
+
+Inverte_fila(fila1);
+Pilha_dequeue(fila1);
 Fila_print(fila1);
 return (0);
 }
