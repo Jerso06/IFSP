@@ -77,7 +77,27 @@ int Pilha_peek(Pilha *P){
     return P->end->val;
 }
 
+void Pilha_print(Pilha *P) {
+    Node *n = P->end;
+    printf("Topo da pilha: \n");
+
+    while (n != NULL) {
+        printf(" - %d \n", n->val);
+        n = n->prev;
+    }
+    printf("Comeco da pilha  \n\n");
+    printf("Quantidade de nos na pilha: %d\n", Pilha_numero_elem(P));
+}
+
 //funções úteis
+
+int Pilha_stack_is_empty(Pilha *p){
+    if(p->tamanho == 0){
+        return 1;
+    }
+
+    return 0;
+}
 
 int Pilha_numero_elem(Pilha *P){
     return (P->tamanho);
@@ -97,18 +117,6 @@ int Pilha_ult(Pilha *P){
     }
 
     return P->end->val;
-}
-
-void Pilha_print(Pilha *P) {
-    Node *n = P->end;
-    printf("Topo da pilha: \n");
-
-    while (n != NULL) {
-        printf(" - %d \n", n->val);
-        n = n->prev;
-    }
-    printf("Comeco da pilha  \n\n");
-    printf("Quantidade de nos na pilha: %d\n", Pilha_numero_elem(P));
 }
 
 int main (){
