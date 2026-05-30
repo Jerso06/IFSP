@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1780095523 source:c:\users\aluno\desktop\ifsp\estrutura de dados 1\exemplofilapilha\main.c
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+
