@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 typedef struct ContaBancaria{
     int numero;
@@ -7,7 +8,7 @@ typedef struct ContaBancaria{
     struct ContaBancaria *next;
 }ContaBancaria;
 
-typedef struct Agencia{
+typedef struct Agencia{ //lista de contas
     ContaBancaria *begin;
     ContaBancaria *end;
     int qtd_contas;
@@ -118,15 +119,22 @@ void removerContaAgencia(Agencia *A, int numeroConta){
 
 void mostrarContasAgencia(Agencia *A){
     ContaBancaria *cb = A->begin;
+    int i = 1;
 
-    printf("A");
+    if(A->begin == NULL){
+        printf("\nNenhuma conta cadastrada na agencia.\n");
+        return;
+    }
+
+    printf("\n=====CONTAS DA AGENCIA=====\n");
+    printf("Numero Conta | Saldo (R$)\n");
 
     while(cb != NULL){
-        printf(" -> %d", cb->numero);
+        printf("%d - %d | R$ %.2f\n", i++, cb->numero, cb->saldo);
         cb = cb->next;
     }
 
-    printf(" -> fim\n");
+    printf("\nTotal de contas cadastradas: %d\n", A->qtd_contas);
 }
 
 int main()
@@ -139,16 +147,18 @@ int main()
     ContaBancaria *c;
 
     while(opcao > 0){
-        printf("\n====Agencia EST2====\n");
+        printf("\n==== Agencia EST2 ====\n");
         printf("1 - Criar conta bancaria\n");
         printf("2 - Depositar saldo na conta\n");
         printf("3 - Sacar saldo da conta\n");
-        printf("4 - Mostrar saldo da conta\n");
+        printf("4 - Consultar saldo da conta\n");
         printf("5 - Excluir conta\n");
         printf("6 - Mostrar contas da agencia\n");
         printf("0 - Sair\n\n");
         printf("R: ");
         scanf("%d", &opcao);
+
+        system("cls");
 
         switch(opcao){
         case 0:
@@ -164,6 +174,8 @@ int main()
             }else{
                 printf("Informe o saldo inicial da conta: ");
                 scanf("%f", &saldo);
+                saldo = round(saldo * 100.0) / 100.0;
+
                 adicionarContaAgencia(ag, numeroConta, saldo);
                 printf("Conta criada com sucesso.\n");
             }
@@ -177,6 +189,7 @@ int main()
             if(c != NULL){
                 printf("Informe o valor que deseja depositar: ");
                 scanf("%f", &saldo);
+                saldo = round(saldo * 100.0) / 100.0;
                 depositar(c, saldo);
             }else{
                 printf("Conta nao encontrada.\n");
@@ -191,6 +204,7 @@ int main()
             if(c != NULL){
                 printf("Informe o valor que deseja sacar: ");
                 scanf("%f", &saldo);
+                saldo = round(saldo * 100.0) / 100.0;
                 sacar(c, saldo);
             }else{
                 printf("Conta nao encontrada.\n");
