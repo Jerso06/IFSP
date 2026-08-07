@@ -1,5 +1,5 @@
 async function loadItems(){
-    let dados = await fetch('../itens.json');
+    let dados = await fetch('/dados.json');
     dados = await dados.json();
 
     dados.forEach(objeto => {
