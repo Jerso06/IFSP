@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int somaSerie(int n){
+float somaSerie(float n){
     if(n == 1){
         return 2;
     }
@@ -11,11 +11,11 @@ int somaSerie(int n){
 
 int main()
 {
-    int n;
+    float n;
 
     printf("Informe um valor: ");
-    scanf("%d", &n);
+    scanf("%f", &n);
 
-    printf("Valor da soma em serie: %d", somaSerie(n));
+    printf("Valor da soma em serie: %f", somaSerie(n));
     return 0;
 }
