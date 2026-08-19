@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int buscaSequencial(int vet[], int tamanho, int valor){
     for(int i = 0; i < tamanho; i++){
@@ -13,8 +14,8 @@ int buscaSequencial(int vet[], int tamanho, int valor){
 
 int main()
 {
-    int vetor[20];
-    int tamanho = 20;
+    int vetor[10];
+    int tamanho = 10;
     int val;
     int pos = -1;
     char opcao = 's';
@@ -25,7 +26,7 @@ int main()
         vetor[i] = (rand() % 100) + 1;
     }
 
-    printf("Vetor com 20 valores aleatorios:\n");
+    printf("Vetor com 10 valores aleatorios:\n");
     for (int i = 0; i < tamanho; i++) {
         printf("%d ", vetor[i]);
     }
@@ -36,7 +37,7 @@ int main()
         scanf("%d", &val);
         pos = buscaSequencial(vetor, tamanho, val);
         if(pos != -1){
-            printf("\nO valor %d foi encontrado na posicao %d", val, pos + 1);
+            printf("\nO valor %d foi encontrado no index %d", val, pos);
             break;
         }else{
             printf("\nValor nao encontrado.\nDeseja realizar outra busca? (s/n): ");

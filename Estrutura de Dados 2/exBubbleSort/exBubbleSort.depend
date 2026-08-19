@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1787101774 source:c:\users\jedso\onedrive\Área de trabalho\ifsp\estrutura de dados 2\exbubblesort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
