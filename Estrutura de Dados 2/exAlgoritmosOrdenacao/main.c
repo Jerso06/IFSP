@@ -55,7 +55,7 @@ void merge(int vet[], int esquerda, int meio, int direita){
     int e[n1], d[n2];
 
     for(i = 0; i < n1; i++){
-        e[i] = vet[esquerda+1];
+        e[i] = vet[esquerda+i];
     }
     for(j = 0; j < n2; j++){
         d[j] = vet[meio + 1 + j];
@@ -94,7 +94,7 @@ void mergeSort(int vet[], int esquerda, int direita){
 
         mergeSort(vet, esquerda, meio); //ordena o lado esquerdo da lista
 
-        mergeSort(vet, meio, direita); //ordena o lado direito da lista
+        mergeSort(vet, meio + 1, direita); //ordena o lado direito da lista
 
         merge(vet, esquerda, meio, direita); //une as metades ordenandas
     }
@@ -147,7 +147,7 @@ int buscaBinaria(int vet[], int tamanho, int valor){
 
 int main()
 {
-    int vetor[10];
+    int vetorBubble[10], vetorInsert[10], vetorMerge[10], vetorSelection[10], vetorQuick[10];
     int tamanho = 10;
     int valor;
     int pos;
@@ -155,20 +155,93 @@ int main()
     srand(time(NULL));
 
     for(int i = 0; i < tamanho; i++){
-        vetor[i] = (rand() % 100) + 1;
+        vetorBubble[i] = (rand() % 100) + 1;
+    }
+    for(int i = 0; i < tamanho; i++){
+        vetorInsert[i] = (rand() % 100) + 1;
+    }
+    for(int i = 0; i < tamanho; i++){
+        vetorMerge[i] = (rand() % 100) + 1;
+    }
+    for(int i = 0; i < tamanho; i++){
+        vetorSelection[i] = (rand() % 100) + 1;
+    }
+    for(int i = 0; i < tamanho; i++){
+        vetorQuick[i] = (rand() % 100) + 1;
     }
 
-    printf("Vetor com 10 valores aleatorios (nao ordenado):\n");
+    //bubble sort
+    printf("VetorBubble:\n");
     for (int i = 0; i < tamanho; i++) {
-        printf("%d ", vetor[i]);
+        printf("%d ", vetorBubble[i]);
     }
     printf("\n\n");
 
-    bubbleSort(vetor, 10);
+    bubbleSort(vetorBubble, 10);
 
     printf("Vetor ordenado:\n");
     for (int i = 0; i < tamanho; i++) {
-        printf("%d ", vetor[i]);
+        printf("%d ", vetorBubble[i]);
+    }
+    printf("\n\n");
+
+    //insert sort
+    printf("VetorInsert:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", vetorInsert[i]);
+    }
+    printf("\n\n");
+
+    insertSort(vetorInsert, 10);
+
+    printf("Vetor ordenado:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", vetorInsert[i]);
+    }
+    printf("\n\n");
+
+    //merge
+    printf("VetorMerge:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", vetorMerge[i]);
+    }
+    printf("\n\n");
+
+    mergeSort(vetorMerge, 0, tamanho - 1);
+
+    printf("Vetor ordenado:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", vetorMerge[i]);
+    }
+    printf("\n\n");
+
+    //selection
+    printf("VetorSelection:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", vetorSelection[i]);
+    }
+    printf("\n\n");
+
+    selectionSort(vetorSelection, 10);
+
+    printf("Vetor ordenado:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", vetorSelection[i]);
+    }
+    printf("\n\n");
+
+    //quick
+    printf("VetorQuick:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", vetorQuick[i]);
+    }
+    printf("\n\n");
+
+    quickSort(vetorQuick, 0, tamanho - 1);
+
+    printf("Vetor ordenado:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", vetorQuick[i]);
     }
     printf("\n\n");
 
