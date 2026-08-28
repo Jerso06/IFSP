@@ -4,10 +4,14 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'styles')));
 app.use(express.static(path.join(__dirname, 'scripts')));
+app.use(express.urlencoded({ extended: true }))
+
+const cardapio = require("./itens.json")
 
 app.get('/dados.json', (req, res) => {
-    res.sendFile(path.join(__dirname, 'itens.json'));
+    res.json(cardapio);
 });
+
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, "pages", "index.html"), function (err) {
@@ -35,6 +39,15 @@ app.get('/fale-conosco', function (req, res) {
         }
     });
 });
+
+app.post('fale-conosco-forms', (req, res) => {
+    const nome = req.body.nome
+    const email = req.body.email
+    const msg = req.body.mensagem
+    console.log('Nome:', nome)
+    console.log('Email:', email)
+    res.send('Mensagem recebida! Obrigado.')
+})
 
 app.listen(3000, () => {
     console.log("Servidor rodando na url http://localhost:3000");

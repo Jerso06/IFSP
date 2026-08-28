@@ -1,0 +1,52 @@
+[
+  {
+    "nome": "Pizza Margherita",
+    "desc": "Massa artesanal, molho de tomate, mussarela, manjericão fresco e azeite de oliva.",
+    "preco": 54.90
+  },
+  {
+    "nome": "Lasanha à Bolonhesa",
+    "desc": "Camadas de massa fresca com molho bolonhesa, queijo e molho branco gratinado.",
+    "preco": 42.50
+  },
+  {
+    "nome": "Risoto de Cogumelos",
+    "desc": "Arroz arbório preparado com cogumelos frescos, parmesão e manteiga.",
+    "preco": 46.90
+  },
+  {
+    "nome": "Filé Mignon ao Molho Madeira",
+    "desc": "Filé mignon grelhado acompanhado de molho madeira e batatas rústicas.",
+    "preco": 68.90
+  },
+  {
+    "nome": "Salmão Grelhado",
+    "desc": "Posta de salmão grelhada servida com legumes salteados e arroz com ervas.",
+    "preco": 72.50
+  },
+  {
+    "nome": "Hambúrguer Artesanal",
+    "desc": "Pão brioche, hambúrguer bovino de 180g, cheddar, bacon crocante e molho especial.",
+    "preco": 34.90
+  },
+  {
+    "nome": "Tiramisù",
+    "desc": "Sobremesa italiana feita com mascarpone, café, biscoito champagne e cacau.",
+    "preco": 19.90
+  },
+  {
+    "nome": "Cheesecake de Frutas Vermelhas",
+    "desc": "Cheesecake cremoso com calda artesanal de frutas vermelhas.",
+    "preco": 18.50
+  },
+  {
+    "nome": "Suco Natural de Laranja",
+    "desc": "Suco preparado na hora com laranjas frescas, sem adição de açúcar.",
+    "preco": 9.90
+  },
+  {
+    "nome": "Refrigerante Lata",
+    "desc": "Refrigerante 350 ml, disponível nos sabores Coca-Cola, Guaraná ou Sprite.",
+    "preco": 7.50
+  }
+]
