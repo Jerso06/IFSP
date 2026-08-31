@@ -90,7 +90,7 @@ void merge(int vet[], int esquerda, int meio, int direita){
 
 void mergeSort(int vet[], int esquerda, int direita){
     if(esquerda < direita){
-        int meio = esquerda + (direita - esquerda) / 2;
+        int meio = (direita + esquerda) / 2;
 
         mergeSort(vet, esquerda, meio); //ordena o lado esquerdo da lista
 
@@ -100,28 +100,39 @@ void mergeSort(int vet[], int esquerda, int direita){
     }
 }
 
-int partition(int vet[], int menor, int maior){
-    int pivo = vet[maior], i = menor - 1;
-    for (int j = menor; j < maior; j++) {
-        if (vet[j] < pivo) {
+void quickSort(int arr[], int inicio, int fim) {
+    int i = inicio;
+    int j = fim;
+
+    // Escolhe o elemento do meio exato como pivô
+    int pivo = arr[fim];
+
+    // Partição usando a estratégia de Hoare
+    while (i <= j) {
+        // Encontra elemento à esquerda que deve ir para a direita
+        while (arr[i] < pivo) {
             i++;
-            int t = vet[i];
-            vet[i] = vet[j];
-            vet[j] = t;
+        }
+        // Encontra elemento à direita que deve ir para a esquerda
+        while (arr[j] > pivo) {
+            j--;
+        }
+        // Troca os elementos de posição se os ponteiros não se cruzaram
+        if (i <= j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
         }
     }
-    int t = vet[i + 1];
-    vet[i + 1] = vet[maior];
-    vet[maior] = t;
 
-    return i + 1;
-}
-
-void quickSort(int vet[], int menor, int maior){
-    if(menor < maior){
-        int pivo = partition(vet, menor, maior);
-        quickSort(vet, menor, pivo - 1);
-        quickSort(vet, pivo + 1, maior);
+    // Chamadas recursivas para as subdivisões
+    if (inicio < j) {
+        quickSort(arr, inicio, j);
+    }
+    if (i < fim) {
+        quickSort(arr, i, fim);
     }
 }
 
@@ -147,7 +158,7 @@ int buscaBinaria(int vet[], int tamanho, int valor){
 
 int main()
 {
-    int vetorBubble[10], vetorInsert[10], vetorMerge[10], vetorSelection[10], vetorQuick[10];
+    int vetorBubble[10], vetorInsert[10], vetorMerge[10], vetorSelection[10], vetorQuick[10] ={13, 4, 39, 2, 25, 8, 21, 1, 7, 44};
     int tamanho = 10;
     int valor;
     int pos;
