@@ -18,6 +18,58 @@ Node* createTree(int valor){
     return n;
 }
 
+typedef struct NoFila {
+    Node* n;
+    struct NoFila* proximo;
+} NoFila;
+
+typedef struct Fila{
+    int tamanho;
+    NoFila *inicio, *fim;
+} Fila;
+
+Fila* createFila(){
+    Fila* f = (Fila*) calloc(1, sizeof(Fila));
+    f->inicio = NULL;
+    f->fim = NULL;
+    f->tamanho = 0;
+    return f;
+}
+
+void enfileirar(Fila* f, Node* raiz){
+    NoFila* nf = (NoFila*) calloc(1, sizeof(NoFila));
+    nf->n = raiz;
+    nf->proximo = NULL;
+
+    if(f->fim == NULL){
+        f->inicio = nf;
+        f->fim = nf;
+    }else{
+        f->fim->proximo = nf;
+        f->fim = nf;
+    }
+
+    f->tamanho++;
+}
+
+Node* desenfileirar(Fila* f){
+    if(f->inicio == NULL){
+        return NULL;
+    }
+
+    NoFila* nf = f->inicio;
+    Node* n = nf->n;
+    f->inicio = f->inicio->proximo;
+
+    if(f->inicio == NULL){
+        f->fim = f->inicio;
+    }
+
+    free(nf);
+    f->tamanho--;
+    return n;
+}
+
 Node* inserirNaArvore(Node* raiz, int valor){
     if(raiz == NULL){
         return createTree(valor);
@@ -129,6 +181,35 @@ int alturaArvore(Node* raiz){
     }
 }
 
+void imprimirPorNivel(Node* raiz){
+    if(raiz == NULL){
+        return;
+    }
+
+    Fila* fila = createFila();
+    enfileirar(fila, raiz);
+    int nivel = 0;
+
+    while(fila->inicio != NULL){
+        int tamanhoNivel = fila->tamanho;
+        printf("Nivel %d: ", nivel);
+
+        for(int i = 0; i < tamanhoNivel; i++){
+            Node* atual = desenfileirar(fila);
+            printf("%d ", atual->val);
+
+            if(atual->left != NULL){
+                enfileirar(fila, atual->left);
+            }
+            if(atual->right != NULL){
+                enfileirar(fila, atual->right);
+            }
+        }
+        printf("\n");
+        nivel++;
+    }
+}
+
 int main()
 {
     int n = 1;
@@ -154,6 +235,7 @@ int main()
     posOrdem(arvore);
     printf("\n\n");
 
+
     printf("Informe um elemento que deseja buscar: ");
     scanf("%d", &n);
     busca = buscarValor(arvore, n);
@@ -165,7 +247,7 @@ int main()
 
     printf("Informe um elemento que deseja remover: ");
     scanf("%d", &n);
-    busca = removerItem(arvore, n);
+    arvore = removerItem(arvore, n);
     printf("Operacao concluida.\n");
 
     preOrdem(arvore); //verificar se o valor sumiu
@@ -173,6 +255,8 @@ int main()
 
     printf("Altura da arvore: %d\n", alturaArvore(arvore));
 
+    printf("\n\nArvore por nivel: \n");
+    imprimirPorNivel(arvore);
 
     return 0;
 }
