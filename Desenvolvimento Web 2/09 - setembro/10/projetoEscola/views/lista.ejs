@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <% if (alunos.length===0) { %>
+        <p>Nenhum aluno cadastrado.</p>
+        <% } else { %>
+            <ul>
+                <% alunos.forEach((aluno)=> { %>
+                    <li>
+                        <%= aluno.nome %> — <%= aluno.idade %> anos
+                                <a href="/editar/<%= aluno.id %>">Editar</a>
+                                <form action="/deletar/<%= aluno.id %>" method="POST" style="display:inline">
+                                    <button>Excluir</button>
+                                </form>
+                    </li>
+                    <% }); %>
+
+            </ul>
+            <% } %>
+</body>
+
+</html>
