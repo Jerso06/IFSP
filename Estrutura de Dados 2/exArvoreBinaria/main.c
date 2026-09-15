@@ -84,6 +84,22 @@ Node* inserirNaArvore(Node* raiz, int valor){
     return raiz;
 }
 
+Node* inverteArvore(Node* raiz){
+    if(raiz == NULL){
+        return NULL;
+    }
+
+    Node* esquerda = inverteArvore(raiz->left);
+    Node* direita = inverteArvore(raiz->right);
+
+    if(esquerda != NULL || direita != NULL){
+        raiz->right = esquerda;
+        raiz->left = direita;
+    }
+
+    return raiz;
+}
+
 void preOrdem(Node* raiz){
     if(raiz == NULL){
         return;
@@ -257,6 +273,18 @@ int main()
 
     printf("\n\nArvore por nivel: \n");
     imprimirPorNivel(arvore);
+
+    arvore = inverteArvore(arvore);
+    printf("\nArvore invertida, novas apresentacoes: \n");
+    printf("\nPre-ordem: ");
+    preOrdem(arvore);
+    printf("\n\n");
+    printf("In-ordem: ");
+    inOrdem(arvore);
+    printf("\n\n");
+    printf("Pos-ordem: ");
+    posOrdem(arvore);
+    printf("\n\n");
 
     return 0;
 }
