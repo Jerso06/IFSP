@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Novo livro</title>
 </head>
+
 <body>
     <h1>Cadastrar livro</h1>
 
-    <%# TODO 5.3: formulário POST para /livros com os campos
-        titulo e autor (obrigatórios) e ano (número, opcional). %>
+    <%# TODO 5.3: formulário POST para /livros com os campos titulo e autor (obrigatórios) e ano (número, opcional). %>
 
-    <a href="/livros">Voltar</a>
+        <form action="/livros" method="POST">
+            <div>
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+
+            <div>
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" required>
+            </div>
+
+            <div>
+                <label for="ano">Ano:</label>
+                <input type="number" id="ano" name="ano">
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <a href="/livros">Voltar</a>
 </body>
+
 </html>

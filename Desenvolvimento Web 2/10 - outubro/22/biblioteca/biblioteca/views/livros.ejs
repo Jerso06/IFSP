@@ -1,18 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Biblioteca da Turma</title>
 </head>
+
 <body>
-    <%# TODO 6.3: "Olá, <usuário>!" e botão Sair (form POST /logout) %>
+    <% if (user) { %>
+        <h2>Olá, <%= user.username %>!</h2>
 
-    <h1>Biblioteca da Turma</h1>
-    <a href="/livros/novo">+ Cadastrar livro</a>
+        <form action="/logout" method="POST">
+            <button type="submit">Sair</button>
+        </form>
+    <% } %>
 
-    <%# TODO 3.2: total de livros e tabela com título, autor e ano;
-        se não houver livros, mostre "Nenhum livro cadastrado ainda." %>
+            <h1>Biblioteca da Turma</h1>
+            <a href="/livros/novo">+ Cadastrar livro</a>
 
-    <%# TODO 5.3: botão Excluir em cada linha (form POST /livros/<id>/delete) %>
+            <%# TODO 3.2: total de livros e tabela com título, autor e ano %>
+
+                <p>Total: <%= livros.length %> livros</p>
+
+                <% if (livros.length===0) { %>
+                    <p>Nenhum livro cadastrado ainda.</p>
+                <% } else { %>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Autor</th>
+                                <th>Ano</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% livros.forEach(livro=> { %>
+                                <tr>
+                                    <td>
+                                        <%= livro.titulo %>
+                                    </td>
+                                    <td>
+                                        <%= livro.autor %>
+                                    </td>
+                                    <td>
+                                        <%= livro.ano %>
+                                    </td>
+                                    <td>
+                                        <form action="/livros/<%= livro.id %>/delete" method="post">
+                                            <input type="submit" value="Remover Livro">
+                                        </form>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                <% } %>
+
+            <%# TODO 5.3: botão Excluir em cada linha (form POST /livros/<id>/delete) %>
 </body>
+
 </html>

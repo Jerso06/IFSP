@@ -17,7 +17,7 @@ app.use(session({
 
 // TODO 1.2: crie a rota GET /sobre
 app.get('/sobre', (req, res) => {
-    res.send('Sobre o projeto de livros');
+    res.send('Página de sobre');
 });
 
 // TODO 2.2: leia o livros.json com require() e crie as rotas
@@ -27,10 +27,10 @@ app.get('/api/livros', (req, res) => {
     res.json(livros);
 });
 
-app.get('api/livros/antigos', (req, res) => {
+app.get('/api/livros/antigos', (req, res) => {
     const livrosAntigos = livros.filter(livro => livro.ano < 1900);
     res.json(livrosAntigos);
-})
+});
 
 
 app.get('/', (req, res) => res.redirect('/livros'));
