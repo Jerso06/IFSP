@@ -59,20 +59,64 @@ void AdicionarVertice(Grafo *g){
 }
 
 void AdicionarAresta(Grafo* g, int origem, int destino){
+    if(g == NULL){
+        printf("\nGrafo inexistente.\n");
+        return;
+    }else if(origem >= g->qtdVertices || origem < 0){
+        printf("\nVertice de origem inexistente.\n");
+        return;
+    }else if(destino >= g->qtdVertices || destino < 0){
+        printf("\nVertice de destino inexistente.\n");
+        return;
+    }
+
     Vertice* v = g->primeiro;
 
     while(v != NULL && v->val != origem){
         v = v->prox;
     }
 
-    if(v == NULL){
-        printf("\nVertice de origem nao encontrada.\n");
-        return;
-    }
-
     Arestas* aux = v->adj;
     v->adj = criarAresta(destino);
     v->adj->next = aux;
+    return;
+}
+
+void DFSPrincipal(Grafo* g, int atual, int vistos[]){
+    vistos[atual] = 1;
+
+    Vertice* v = g->primeiro;
+    while(v != NULL && v->val != atual){
+        v = v->prox;
+    }
+
+    if(v == NULL){
+        return;
+    }
+
+    Arestas* a = v->adj;
+
+    while(a != NULL){
+        if(vistos[a->destino] == 0){
+            DFSPrincipal(g, a->destino, vistos);
+        }
+
+        a = a->next;
+    }
+}
+
+void DFS(Grafo* g, int inicio){
+    if(g == NULL || inicio < 0 || inicio >= g->qtdVertices){
+            printf("\nImpossivel encontrar um caminho.\n");
+        return;
+    }
+
+    int vistos[g->qtdVertices];
+    for(int i = 0; i < g->qtdVertices; i++){
+        vistos[i] = 0;
+    }
+
+    DFSPrincipal(g, inicio, vistos);
 }
 
 int main()
